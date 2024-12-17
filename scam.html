@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Center vertically */
+            font-family: cursive; /* Better font */
+            font-size: 4rem;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .no {
+            transition: transform 0.2s ease; /* Smooth transition */
+        }
+        button{
+            font-size: 2rem;
+            background-color: rgb(173, 173, 236);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Do you like me?</h1>
+        <span>
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </span>
+    </div>
+    <script>
+        let yes = document.querySelector('.yes');
+        let no = document.querySelector('.no');
+        let isMovedRight = false; // Track position
+
+        yes.addEventListener('click', () => {
+            let h1 = document.querySelector('h1');
+            h1.innerText = 'Thank You💖💍🧿';
+            let button = document.querySelectorAll('button');
+            button.forEach((b)=>{
+                b.style.display = "none";
+            });
+        });
+
+        no.addEventListener('mouseover', () => {
+            if (isMovedRight) {
+                no.style.transform = "translate(-400px)"; // Move back to original position
+            } else {
+                no.style.transform = "translate(200px)"; // Move to the right
+            }
+            isMovedRight = !isMovedRight; // Toggle position
+        });
+    </script>
+</body>
+</html>
