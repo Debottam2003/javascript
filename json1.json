@@ -1,0 +1,12 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "isEmployed": true,
+    "skills": ["JavaScript", "Python", "HTML"],
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "zipCode": "10001"
+    }
+  }
+  

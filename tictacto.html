@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tictacto.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="game">
+        <button class="box" id="box1" onclick="enter(1)"><h1 id="1"></h1></button>
+        <button class="box" id="box2" onclick="enter(2)"><h1 id="2"></h1></button>
+        <button class="box" id="box3" onclick="enter(3)"><h1 id="3"></h1></button>
+        <button class="box" id="box4" onclick="enter(4)"><h1 id="4"></h1></button>
+        <button class="box" id="box5" onclick="enter(5)"><h1 id="5"></h1></button>
+        <button class="box" id="box6" onclick="enter(6)"><h1 id="6"></h1></button>
+        <button class="box" id="box7" onclick="enter(7)"><h1 id="7"></h1></button>
+        <button class="box" id="box8" onclick="enter(8)"><h1 id="8"></h1></button>
+        <button class="box" id="box9" onclick="enter(9)"><h1 id="9"></h1></button>
+    </div>
+    <div>
+      <button onclick="reset()" class="but">Reset</button>
+    </div>
+    <script>
+         function reset(){
+            location.reload(1);
+         }
+        let c = 0;
+function enter(val){
+    c++;
+    input(c,val);
+}
+function input(c,val){
+         if(c == 1){
+            document.getElementById(val).textContent = "X";
+         }
+         if(c == 2){
+            document.getElementById(val).textContent = "0";
+         }
+         if(c == 3){
+            document.getElementById(val).textContent = "X";
+         }
+         if(c == 4){
+            document.getElementById(val).textContent = "0";
+         }
+         if(c == 5){
+            document.getElementById(val).textContent = "X";
+         }
+         if(c == 6){
+            document.getElementById(val).textContent = "0";
+         }
+         if(c == 7){
+            document.getElementById(val).textContent = "X";
+         }
+         if(c == 8){
+            document.getElementById(val).textContent = "0";
+         }
+         if(c == 9){
+            document.getElementById(val).textContent = "X";
+         }
+
+        }
+    </script>
+</body>
+</html>

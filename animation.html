@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animation</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .box{
+            width:750px;
+            height:500px;
+            border:solid black 2px;
+            background-image:url("your.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* animation: colorchange 3s linear infinite; */
+            /* animation:backimage 8s ease-in-out infinite ; */
+            animation:scaling 10s ease infinite;
+        }
+        /* @keyframes colorchange{
+            0%{
+                background-color:red;
+            }
+            25%{
+                background-color:green;
+            }
+            50%{
+                background-color:yellow;
+            }
+            75%{
+                background-color:blue;
+            }
+            100%{
+                background-color:rgb(0, 255, 0);
+            }
+        } */
+         /* @keyframes backimage{
+            0%{
+                background-image:url("your.png");
+            }
+            25%{
+                background-image:url("zoro.jpg");
+            }
+            50%{
+                background-image:url("deb.png");
+            }
+            75%{
+                background-image:url("ichi.png");
+            }
+            100%{
+                background-image:url("roronoa-zoro.jpg");
+            }           
+         } */
+          @keyframes scaling{
+            0%{
+                background-image:url("your.png");
+                transform:rotate(0deg) scale(1) translateX(0px);
+            }
+            25%{
+                background-image:url("ichi.png");
+                transform:rotate(10deg) scale(1.25) translateX(500px);
+            }
+            50%{
+                background-image:url("zoro.jpg");
+                transform:rotate(0deg) scale(1) translateX(0px);
+            }
+            75%{
+                background-image:url("deb.png");
+                transform:rotate(-10deg) scale(1.25) translateX(-500px);
+            }
+            100%{
+                background-image:url("your.png");
+                transform:rotate(0deg) scale(1) translateX(0px);
+            }
+          }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

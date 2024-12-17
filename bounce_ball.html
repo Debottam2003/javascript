@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ball</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+        }
+        .anime{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #ball{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%;
+            color: #363434;
+            /* background-color: red;; */
+            /* background-image: linear-gradient(90deg, #ff0000 0%, #ffff00 25%,#8f15e5 50%, #ffff00 75%,#ff0000 100% ); */
+            background-image: linear-gradient(90deg, 
+    #ff0000 0%,    
+    #ff7f00 16%, 
+    #ffff00 33%,   
+    #00ff00 50%,  
+    #0000ff 66%,  
+    #76dcf8 83%,  
+    #8b00ff 100%
+    );
+            animation: bounce 2s linear infinite;
+            overflow: hidden;
+        }
+        @keyframes bounce{
+               0%{
+                 transform: translateY(0px);
+               }
+               12.5%{
+                transform: translateY(75px);
+               } 
+               25%{
+                transform: translateY(150px);
+               }
+               37.5%{
+                transform: translateY(225px);
+               }
+               50%{
+                transform: translateY(300px);
+               }
+               62.5%{
+                transform: translateY(225px);
+               }
+               75%{
+                transform: translateY(150px);
+               }
+               87.5%{
+                transform: translateY(75px);
+               }
+               100%{
+                transform: translateY(0px);
+               }
+        }
+        #surface{
+            width: 1000px;
+            height: 100px;
+            margin-top: 305px;
+            background-color: lightgreen;
+            background-image: linear-gradient(180deg, 
+    #ff0000 0%,    
+    #ff7f00 16%,   
+    #ffff00 33%,   
+    #00ff00 50%,   
+    #0000ff 66%,   
+    #76dcf8 83%,   
+    #8b00ff 100%  
+    );
+
+        }
+    </style>    
+</head>
+<body>
+    <div class="anime">
+    <div id="ball"><h2></h2></div>
+    <div id="surface"></div>
+    </div>
+</body>
+</html>

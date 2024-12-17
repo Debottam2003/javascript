@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Download PDF with Table</h1>
+        <a href="#" id="downloadLink">Download PDF</a>
+    </div>
+    
+    <script>
+    document.getElementById('downloadLink').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+
+        const { jsPDF } = window.jspdf;
+        const { autoTable } = window.jspdf;
+
+        const doc = new jsPDF();
+
+        // Define table data
+        const data = [
+            { id: 1, name: "John Doe", age: 30 },
+            { id: 2, name: "Jane Smith", age: 25 },
+            { id: 3, name: "Mike Johnson", age: 35 },
+        ];
+
+        // Prepare columns and rows for autoTable
+        const columns = [
+            { header: "ID", dataKey: "id" },
+            { header: "Name", dataKey: "name" },
+            { header: "Age", dataKey: "age" },
+        ];
+
+        // Add title
+        doc.text("./position.html", 14, 22);
+
+        // Generate table
+        // autoTable(doc, {
+        //     head: [columns.map(col => col.header)],
+        //     body: data.map(item => [item.id, item.name, item.age]),
+        //     startY: 30,
+        // });
+
+        // Save the PDF
+        doc.save("sample.pdf");
+    });
+    </script>
+</body>
+</html>

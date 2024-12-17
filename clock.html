@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Clock</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-weight: bolder;
+            /* background-color: #190251; */
+            background-image: linear-gradient(135deg, 
+    #060c77 0%,    /* Red */
+    #ae81edd5 16%,   /* Orange */
+    #060c84 33%,   /* Yellow */
+    #ae81edd5 50%,   /* Green */
+    #060c84 66%,   /* Blue */
+    #ae81edd5 83%,   /* Indigo */
+    #050b76 100%   /* Violet */ );
+            /* background-image: url("https://images.pexels.com/photos/1257894/pexels-photo-1257894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 300px;
+            height: 80%;
+            height: 200px;
+            font-size: 60px;
+            color: #ffffff;
+            padding: 1rem;
+            /* border: 2px solid rgb(0, 0, 0); */
+            border-radius: 50%;
+            box-shadow: 3px 3px 3px black,
+                        -3px -3px 3px white;
+            /* border-image: linear-gradient(135deg, 
+    #5d099ed8 0%,   
+    #ffffffd5 16%,  
+    #64dff5c0 33%,  
+    #0d27d0cd 50%,   
+    #8c00ffd6 66%,  
+    #76dcf8ce 83%,
+    #0000ffd1 100%) 1; */
+    /* background-image: linear-gradient(135deg, 
+    #5d099ed8 0%,    
+    #ffffffd5 16%,
+    #64dff5c0 33%,   
+    #0d27d0cd 50%,   
+    #8c00ffd6 66%,   
+    #76dcf8ce 83%,   
+    #0000ffd1 100% ); */
+    background-color: rgba(144, 144, 144, 0.306);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad">
+        <div id="clock"></div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display the time immediately
+    </script>
+</body>
+</html>

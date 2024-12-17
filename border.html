@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            border: solid 2px;
+            border-radius: 50%;
+            border-top-color: greenyellow;
+            border-right-color: blue;
+            border-left-color: red;
+            border-bottom-color: yellow;
+            /* border-image: linear-gradient(135deg, 
+    #ff0000 0%, 
+    #ff7f00 16%,  
+    #ffff00 33%,  
+    #00ff00 50%,  
+    #0000ff 66%,   
+    #76dcf8 83%,  
+    #8b00ff 100% ) 1; */
+            box-shadow: rgb(227, 34, 166) 2px 5px 25px;
+            background-image: url("your.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

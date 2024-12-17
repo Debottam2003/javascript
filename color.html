@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="extra.css">
+    <style>
+    #box{
+        width: 200px;
+        height: 200px;
+        /* border: solid rgb(241, 236, 75) 10px; */
+        box-shadow: red 1px 7.5px 30px;
+        border:solid red 1.5px;
+        border-radius: 5px;
+    }
+    h1{
+        color:white
+    }
+    body{
+        /* width: 25%;
+        margin-left: auto;
+        margin-right: auto; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* horizontal alignment */
+        align-items: center;
+        background-color: rgb(10, 9, 9);
+    }
+    #nm{
+        color:rgb(255, 255, 255);
+        background-color: black;
+        border:solid red 1px;
+        border-radius: 5px;
+        height: 25px;
+        /* box-shadow: red 1px 7.5px 30px; */
+        box-shadow: rgb(255, 234, 0) 1px 5px 20px;
+    }
+    #button{
+        width: 50px;
+        height: 50px;
+        color:rgb(255, 255, 255);
+        background-color: black;
+        border:solid rgb(245, 82, 6) 1px;
+        border-radius: 50px;
+        /* box-shadow: rgb(255, 234, 0) 1px 5px 20px; */
+        box-shadow: red 1px 7.5px 30px;
+    }   
+    </style>
+</head>
+<body>
+    <h1>Write any color name to change the box into that color</h1>
+    <div id="box"></div><br>
+    <input type="text" name="" id="nm" placeholder="Enter a Color"><br>
+    <!-- <div id="name">red</div> -->
+    <button id="button" onclick="color()">Go</button>
+    <!-- <script src="extra.js"></script> -->
+</body>
+<script>
+function color(){
+    // let t = document.getElementById('name').textContent;
+    let t = document.getElementById('nm').value;
+    let b = document.getElementById('box');
+    b.style.backgroundColor = t;
+    b.style.border = "solid " + t + " 1px"; 
+    b.style.boxShadow= t + " 2px 7.5px 30px";
+    console.log(t);
+}
+</script>
+</html>

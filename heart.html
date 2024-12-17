@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1{
+            padding: 75px;
+        }
+        .heart {
+            position: relative; /* Make sure the pseudo-elements are positioned relative to .heart */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /*transform: rotate(135deg); Rotate the main element */
+            margin: 50px;
+            box-shadow: rgb(104, 35, 35) 2px 7.5px 30px;
+            transition: 2s;
+            animation: scaling 2s ease-in-out infinite;      
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -100px; 
+            left: 0;
+            box-shadow: rgb(218, 135, 135) 2px -5px 5px;
+        }
+        .heart::after {
+            box-shadow: rgb(218, 135, 135) -5px 2px 5px;
+            top: 0;
+            left:-100px;           
+        }
+        @keyframes scaling{
+            0%{
+                transform:rotate(45deg) scale(1);
+            }
+            50%{
+                transform:rotate(45deg) scale(1.25);
+            }
+            100%{
+                transform:rotate(45deg) scale(1);
+            }
+          }
+    </style>
+</head>
+<body>
+    <h1>I</h1>
+    <div class="heart"></div>
+    <h1>You</h1>
+</body>
+</html>

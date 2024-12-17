@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button class="btn" value="1">ok</button>
+    <button class="btn" value="2">ok</button>
+    <button class="btn" value="3">ok</button>
+    <button class="btn" value="4">ok</button>
+    <button class="btn" value="5">ok</button>-->
+    <button class="btn" value="6">ok</button>
+</body>
+<script>
+    let btn = document.querySelector(".btn");
+    btn.addEventListener('click',()=>{
+        document.body.innerHTML = `<style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("your.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            backdrop-filter: blur;
+            font-size: larger;  
+        }
+        .email input{
+            margin-top: 55px;
+            position: full;
+            border: 1.5px solid rgb(0, 0, 0);
+            border-radius: 50px;
+            box-shadow: 3px 2px 3px black;
+            color: black;
+            width: 225px;
+            height: 30px;
+            padding-bottom: 5px;
+        }
+        .Password input{
+            margin-top: 15px;
+            border: 1.5px solid rgb(0, 0, 0);
+            border-radius: 50px;
+            box-shadow: 3px 2px 3px black;
+            color:black;
+            width: 225px;
+            height: 30px;
+            padding-bottom: 5px;
+        }
+        .wrapper{
+            width: 425px;
+            font-family:calibri;
+            text-align: center;
+            border: 3.5px solid rgb(236, 236, 236);
+            box-shadow: 3.5px 3.5px 3.5px black;
+            backdrop-filter: blur;
+            border-radius: 15px;
+            background-color: rgba(231, 241, 251, 0.309);
+        } 
+        .button:havor{
+           text-decoration: underline;
+        }
+        input[type = "submit"]{
+            width: 50px;
+            height:30px;
+            background-color:white;
+            border:1px solid rgb(0, 0, 0);
+            border-radius: 30px;
+            box-shadow: 3px 2px 3px black;
+        }
+        </style>
+        <div class = "wrapper">
+        <h4>
+           <div class = "login" ><label><h1>Login</h1></label></div>
+           <div class = "email">
+            <input type="text" name = "email" placeholder=" Email"></div><br>
+            <div class = "Password">
+            <input type="password" name = "password" placeholder=" Password"></div><br>
+            <div class="checkbox" ><input type = "checkbox" name = "tik" class="check"> Remember me<br><br>
+            <label>Forgot Password?</label></div><br>
+            <div class = "button" ><input type = "submit" name="submit" Value = "login"></div>
+        </h4>
+    </div>`;
+    });
+    
+    // let btn = document.querySelectorAll("button");
+    // for(let i of btn){
+    //     i.addEventListener('click',()=>{
+    //         console.log(i.value);
+    //     })
+    // }
+</script>
+</html>

@@ -1,0 +1,357 @@
+[
+    {
+        "name": "Debottam",
+        "age": 21,
+        "marks": 85
+    },
+    {
+        "name": "Okudera",
+        "age": 24,
+        "marks": 72
+    },
+    {
+        "name": "Ichinose",
+        "age": 17,
+        "marks": 88
+    },
+    {
+        "name": "Ayanokoji",
+        "age": 18,
+        "marks": 94
+    },
+    {
+        "name": "Rony",
+        "age": 22,
+        "marks": 67
+    },
+    {
+        "name": "Haruto",
+        "age": 20,
+        "marks": 78
+    },
+    {
+        "name": "Kazuki",
+        "age": 19,
+        "marks": 81
+    },
+    {
+        "name": "Mika",
+        "age": 23,
+        "marks": 90
+    },
+    {
+        "name": "Sakura",
+        "age": 25,
+        "marks": 62
+    },
+    {
+        "name": "Takeshi",
+        "age": 26,
+        "marks": 75
+    },
+    {
+        "name": "Hinata",
+        "age": 21,
+        "marks": 80
+    },
+    {
+        "name": "Yuto",
+        "age": 22,
+        "marks": 69
+    },
+    {
+        "name": "Ayumi",
+        "age": 24,
+        "marks": 92
+    },
+    {
+        "name": "Sota",
+        "age": 20,
+        "marks": 87
+    },
+    {
+        "name": "Nao",
+        "age": 27,
+        "marks": 74
+    },
+    {
+        "name": "Kaito",
+        "age": 18,
+        "marks": 95
+    },
+    {
+        "name": "Misaki",
+        "age": 19,
+        "marks": 77
+    },
+    {
+        "name": "Ren",
+        "age": 21,
+        "marks": 85
+    },
+    {
+        "name": "Yuki",
+        "age": 23,
+        "marks": 93
+    },
+    {
+        "name": "Ryota",
+        "age": 20,
+        "marks": 64
+    },
+    {
+        "name": "Shota",
+        "age": 28,
+        "marks": 88
+    },
+    {
+        "name": "Keiko",
+        "age": 29,
+        "marks": 79
+    },
+    {
+        "name": "Daiki",
+        "age": 24,
+        "marks": 91
+    },
+    {
+        "name": "Natsuki",
+        "age": 18,
+        "marks": 65
+    },
+    {
+        "name": "Minato",
+        "age": 30,
+        "marks": 73
+    },
+    {
+        "name": "Akira",
+        "age": 27,
+        "marks": 90
+    },
+    {
+        "name": "Yuna",
+        "age": 22,
+        "marks": 81
+    },
+    {
+        "name": "Shinobu",
+        "age": 25,
+        "marks": 83
+    },
+    {
+        "name": "Eri",
+        "age": 19,
+        "marks": 72
+    },
+    {
+        "name": "Riku",
+        "age": 21,
+        "marks": 96
+    },
+    {
+        "name": "Mei",
+        "age": 26,
+        "marks": 69
+    },
+    {
+        "name": "Haru",
+        "age": 20,
+        "marks": 74
+    },
+    {
+        "name": "Takumi",
+        "age": 18,
+        "marks": 97
+    },
+    {
+        "name": "Yuji",
+        "age": 24,
+        "marks": 82
+    },
+    {
+        "name": "Nao",
+        "age": 28,
+        "marks": 64
+    },
+    {
+        "name": "Miyu",
+        "age": 22,
+        "marks": 78
+    },
+    {
+        "name": "Koharu",
+        "age": 25,
+        "marks": 66
+    },
+    {
+        "name": "Aarav",
+        "age": 23,
+        "marks": 85
+    },
+    {
+        "name": "Ishaan",
+        "age": 21,
+        "marks": 77
+    },
+    {
+        "name": "Ananya",
+        "age": 20,
+        "marks": 92
+    },
+    {
+        "name": "Riya",
+        "age": 19,
+        "marks": 88
+    },
+    {
+        "name": "Kabir",
+        "age": 24,
+        "marks": 79
+    },
+    {
+        "name": "Neha",
+        "age": 25,
+        "marks": 84
+    },
+    {
+        "name": "Arjun",
+        "age": 22,
+        "marks": 74
+    },
+    {
+        "name": "Priya",
+        "age": 26,
+        "marks": 67
+    },
+    {
+        "name": "Rahul",
+        "age": 27,
+        "marks": 93
+    },
+    {
+        "name": "Sneha",
+        "age": 21,
+        "marks": 86
+    },
+    {
+        "name": "Vikram",
+        "age": 23,
+        "marks": 82
+    },
+    {
+        "name": "Sanjana",
+        "age": 20,
+        "marks": 91
+    },
+    {
+        "name": "Manish",
+        "age": 24,
+        "marks": 65
+    },
+    {
+        "name": "Pooja",
+        "age": 22,
+        "marks": 79
+    },
+    {
+        "name": "Vivek",
+        "age": 25,
+        "marks": 76
+    },
+    {
+        "name": "Nisha",
+        "age": 21,
+        "marks": 68
+    },
+    {
+        "name": "Rohan",
+        "age": 24,
+        "marks": 84
+    },
+    {
+        "name": "Shivani",
+        "age": 19,
+        "marks": 93
+    },
+    {
+        "name": "Abhishek",
+        "age": 22,
+        "marks": 90
+    },
+    {
+        "name": "Kavya",
+        "age": 23,
+        "marks": 85
+    },
+    {
+        "name": "Varun",
+        "age": 26,
+        "marks": 73
+    },
+    {
+        "name": "Aditya",
+        "age": 28,
+        "marks": 80
+    },
+    {
+        "name": "Oliver",
+        "age": 24,
+        "marks": 86
+    },
+    {
+        "name": "Sophia",
+        "age": 22,
+        "marks": 94
+    },
+    {
+        "name": "Liam",
+        "age": 23,
+        "marks": 88
+    },
+    {
+        "name": "Emma",
+        "age": 21,
+        "marks": 91
+    },
+    {
+        "name": "Noah",
+        "age": 25,
+        "marks": 85
+    },
+    {
+        "name": "Isabella",
+        "age": 20,
+        "marks": 79
+    },
+    {
+        "name": "James",
+        "age": 27,
+        "marks": 95
+    },
+    {
+        "name": "Charlotte",
+        "age": 26,
+        "marks": 82
+    },
+    {
+        "name": "Benjamin",
+        "age": 22,
+        "marks": 83
+    },
+    {
+        "name": "Amelia",
+        "age": 23,
+        "marks": 78
+    },
+    {
+        "name": "Lucas",
+        "age": 24,
+        "marks": 90
+    },
+    {
+        "name": "Mia",
+        "age": 21,
+        "marks": 87
+    }
+]
