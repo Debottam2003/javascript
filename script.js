@@ -1003,33 +1003,33 @@ add_btn.forEach((b)=>{
 //.........END.........(For Now)
 
 //Hashing
-let numbers = [];
-for (let i = 0; i < 500; i++) {
-    let num = Math.floor(Math.random() * 1000);
-    numbers.push(num);
-}
-console.log(numbers);
-let HashTable = [];
-for (let i = 0; i < 500; i++) {
-    HashTable.push(0);
-}
-for (let i of numbers) {
-    let index = i % 100;
-    HashTable[index] = i;
-}
-console.log(HashTable);
-let c = 0;
-for (let i of HashTable) {
-    if (i !== 0) {
-        c++;
-    }
-}
-console.log(c);
-function search(num) {
-    let index = num % 100;
-    if (HashTable[index] === num) {
-        return index;
-    }
-    return -1;
-}
-console.log(search(99));
+// let numbers = [];
+// for (let i = 0; i < 500; i++) {
+//     let num = Math.floor(Math.random() * 1000);
+//     numbers.push(num);
+// }
+// console.log(numbers);
+// let HashTable = [];
+// for (let i = 0; i < 500; i++) {
+//     HashTable.push(0);
+// }
+// for (let i of numbers) {
+//     let index = i % 100;
+//     HashTable[index] = i;
+// }
+// console.log(HashTable);
+// let c = 0;
+// for (let i of HashTable) {
+//     if (i !== 0) {
+//         c++;
+//     }
+// }
+// console.log(c);
+// function search(num) {
+//     let index = num % 100;
+//     if (HashTable[index] === num) {
+//         return index;
+//     }
+//     return -1;
+// }
+// console.log(search(99));
