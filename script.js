@@ -1034,59 +1034,69 @@ add_btn.forEach((b)=>{
 // }
 // console.log(search(99));
 window.addEventListener('load', async (event) => {
-
+    let c = 0;
     //const url = 'https://dog.ceo/api/breeds/image/random';
     //const url = "https://emojihub.yurace.pro/api/random";
     //const options = { method: 'GET', headers: { accept: 'application/json' } };
     const url = "https://picsum.photos/700/500?grayscale";
-
-    try {
-        const response = await fetch(url);
-        //const data = await response.json();
-        // console.log(data.message);
-        console.log(response);
-        let main = document.querySelector('.main');
-        // let img = document.createElement('img');
-        // img.setAttribute("src" , data.message);
-        // main.appendChild(img);
-        //console.log(data.htmlCode[0].substring(0,data.htmlCode[0].length - 1));
-        //let emo = document.createElement('h1');
-        //emo.innerHTML = data.htmlCode[0].substring(0,data.htmlCode[0].length - 1);
-        let img = document.createElement('img');
-        img.style.marginRight = "30px";
-        img.style.marginLeft = "5px";
-        img.setAttribute("src", response.url);
-        main.appendChild(img);
-    } catch (error) {
-        console.error(error);
+    async function load() {
+        try {
+            const response = await fetch(url);
+            //const data = await response.json();
+            // console.log(data.message);
+            //console.log(response);
+            let main = document.querySelector('.main');
+            // let img = document.createElement('img');
+            // img.setAttribute("src" , data.message);
+            // main.appendChild(img);
+            //console.log(data.htmlCode[0].substring(0,data.htmlCode[0].length - 1));
+            //let emo = document.createElement('h1');
+            //emo.innerHTML = data.htmlCode[0].substring(0,data.htmlCode[0].length - 1);
+            let img = document.createElement('img');
+            img.style.marginRight = "30px";
+            img.style.marginLeft = "5px";
+            img.setAttribute("src", response.url);
+            main.appendChild(img);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    while (c < 20) {
+        load();
+        c++;
     }
 });
 let btn3 = document.querySelector('.btn3');
 btn3.addEventListener('click', async (event) => {
-
+    let c = 0;
     //const url = 'https://dog.ceo/api/breeds/image/random';
     //const url = "https://emojihub.yurace.pro/api/random";
     //const options = { method: 'GET', headers: { accept: 'application/json' } };
     const url = "https://picsum.photos/700/500";
-
-    try {
-        const response = await fetch(url);
-        //const data = await response.json();
-        // console.log(data.message);
-        console.log(response);
-        let main = document.querySelector('.main');
-        // let img = document.createElement('img');
-        // img.setAttribute("src" , data.message);
-        // main.appendChild(img);
-        //console.log(data.htmlCode[0].substring(0,data.htmlCode[0].length - 1));
-        //let emo = document.createElement('h1');
-        //emo.innerHTML = data.htmlCode[0].substring(0,data.htmlCode[0].length - 1);
-        let img = document.createElement('img');
-        img.style.marginRight = "30px";
-        img.style.marginLeft = "5px";
-        img.setAttribute("src", response.url);
-        main.appendChild(img);
-    } catch (error) {
-        console.error(error);
+    async function load() {
+        try {
+            const response = await fetch(url);
+            //const data = await response.json();
+            // console.log(data.message);
+            //console.log(response.url);
+            let main = document.querySelector('.main');
+            // let img = document.createElement('img');
+            // img.setAttribute("src" , data.message);
+            // main.appendChild(img);
+            //console.log(data.htmlCode[0].substring(0,data.htmlCode[0].length - 1));
+            //let emo = document.createElement('h1');
+            //emo.innerHTML = data.htmlCode[0].substring(0,data.htmlCode[0].length - 1);
+            let img = document.createElement('img');
+            img.style.marginRight = "30px";
+            img.style.marginLeft = "5px";
+            img.setAttribute("src", response.url);
+            main.appendChild(img);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    while (c < 20) {
+        load()
+        c++;
     }
 });
