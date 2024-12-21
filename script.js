@@ -1033,3 +1033,20 @@ add_btn.forEach((b)=>{
 //     return -1;
 // }
 // console.log(search(99));
+window.addEventListener('load', async (event) => {
+
+    const url = 'https://dog.ceo/api/breeds/image/random';
+    //const options = { method: 'GET', headers: { accept: 'application/json' } };
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data.message);
+        let main = document.querySelector('.main');
+        let img = document.createElement('img');
+        img.setAttribute("src" , data.message);
+        main.appendChild(img);
+    } catch (error) {
+        console.error(error);
+    }
+});
