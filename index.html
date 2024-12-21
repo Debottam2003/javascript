@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pexels Clone</title>
+    <style>
+      img:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+        opacity: 0.7;
+        transform: translateY(2px);
+      }
+    </style>
 </head>
 <body style="background-color: #212121;
             color : aliceblue;
@@ -11,13 +19,17 @@
             margin-left: 15px;
             width: 98%;
             padding: 0;">
-<h1>
-  <h3 style="color: aliceblue;">Pexels</h3>
-  <div class="main" style = "background-color: #dadada;">
+  <h1 style="color: aliceblue;">Pexels@deb</h1>
+  <div class="main" style = "background-color: #dadada;
+                             padding: 0;">
     <!-- <button id="btn1" style="color : red; position : relative; top : 1px">Get Table1</button>
     <button id="btn2" style="color : blue">Get Table2</button> -->
     <br /><br />
-    <h1 style="color: #212121; margin-left: 15px;">The best free stock photos, royalty free images shared by creators.</h1><br />
+    <h1 style="color: #212121;
+               margin-left: 15px;
+               padding: 0;
+               text-align: center;"
+               >The best free stock photos, royalty free images shared by creators.</h1><br />
     <button class="btn3" style="color : green; 
                                 position : fixed;
                                 padding: 5px;
@@ -32,7 +44,9 @@
                                 text-decoration: none;
                                 display: inline-block;
                                 transition-duration: 0.4s;
-                                margin: 4px;"
+                                margin: 4px;
+                                font-family: cursive;
+                                z-index: 10;"
                                 >Get Image</button>
     <div class="table"></div>
     <table class="t2"></table>
