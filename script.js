@@ -1038,7 +1038,7 @@ window.addEventListener('load', async (event) => {
     //const url = 'https://dog.ceo/api/breeds/image/random';
     //const url = "https://emojihub.yurace.pro/api/random";
     //const options = { method: 'GET', headers: { accept: 'application/json' } };
-    const url = "https://picsum.photos/700/500?grayscale";
+    const url = "https://picsum.photos/700/500";
     async function load() {
         try {
             const response = await fetch(url);
