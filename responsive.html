@@ -88,8 +88,8 @@
         <div class="yellow">4</div>
     </div> -->
     <div class="image"></div>
-    <button class="btn btn-secondary">Click</button>
-    <div> hi</div>
+    <button class="btn btn-dark prev"><</button>
+    <div class="btn btn-dark next">></div>
     <script>
         let img_arr = [
             "https://images.pexels.com/photos/15838266/pexels-photo-15838266/free-photo-of-camping-among-trees-with-city-behind-at-night.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -114,7 +114,25 @@
             slider.src = img_arr[i];
             i++;
         }
-        setInterval(changeimage, 2000);
+        setInterval(changeimage, 5000);
+        let prev = document.querySelector('.prev');
+        prev.addEventListener('click', ()=>{
+            if(i == 0){
+                i = img_arr.length - 1;
+            }
+            slider.src = img_arr[i];
+            i--;
+        });
+        let next = document.querySelector('.next');
+        next.addEventListener('click', ()=>{
+            // if(i == img_arr.length){
+            //     i = 0;
+            // }
+            // slider.src = img_arr[i];
+            // i++;
+            changeimage();
+        });
+        //let n = prompt('Enter a number');
     </script>
 </body>
 </html>
