@@ -16,12 +16,17 @@
 
 // console.log(`Node.js completed the task in ${timeTaken.toFixed(3)} milliseconds.`);
 
-let obj = {
-  name : "debottam",
-  age : 21
-}
-console.log(obj);
-obj.toString = function(){
-  return "rony";
-}
-console.log(obj.toString());
+// let obj = {
+//   name : "debottam",
+//   age : 21
+// }
+// console.log(obj);
+// obj.toString = function(){
+//   return "rony";
+// }
+// console.log(obj.toString());
+
+// let res = (76/(6*6)).toFixed(1);
+// console.log(res);
+
+
