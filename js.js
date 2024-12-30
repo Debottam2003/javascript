@@ -29,4 +29,7 @@
 // let res = (76/(6*6)).toFixed(1);
 // console.log(res);
 
+// let input = require('prompt-sync')();
+// let num = input("Enter the number: ");
+// console.log(num);
 
