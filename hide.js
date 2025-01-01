@@ -14,3 +14,9 @@ eye.addEventListener('click',(event)=>{
     }
 });
 
+let text_field = document.querySelector('.text_field');
+text_field.addEventListener('input', (event) => {
+    console.log('Value updated:', text_field.value);
+});
+
+
