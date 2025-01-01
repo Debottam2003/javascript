@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 90vh;
-            background-color: #313131;
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        background-color: #313131;
+      }
+      .logo {
+        animation: spin 10s linear infinite;
+      }
+      .spin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 90px;
+        position: relative;
+        border: 8px solid #5db6f1;
+        border-radius: 50%;
+      }
+      .spin::before,
+      .spin::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 90px;
+        border: 8px solid #5db6f1;
+        border-radius: 50%;
+      }
+      .spin::before {
+        transform: rotate(60deg);
+      }
+      .spin::after {
+        transform: rotate(-60deg);
+      }
+      .loading {
+        display: none;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid aliceblue;
+        border-top: 5px solid cornflowerblue;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        .logo{
-            animation: spin 10s linear infinite;
+        100% {
+          transform: rotate(360deg);
         }
-        .spin {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 200px;
-            height: 90px;
-            position: relative;
-            border: 8px solid #5db6f1;
-            border-radius: 50%;
-        }
-        .spin::before,
-        .spin::after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 90px;
-            border: 8px solid #5db6f1;
-            border-radius: 50%;
-        }
-        .spin::before{
-            transform: rotate(60deg);
-        }
-        .spin::after{
-            transform: rotate(-60deg);
-        }
-        .loading{
-            display: none;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid aliceblue;
-            border-top: 5px solid cornflowerblue;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        } 
-         .circle{
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #5db6f1;
-         }
+      }
+      .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #5db6f1;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="logo">
-    <div class="spin">
+      <div class="spin">
         <div class="circle"></div>
-    </div>
+      </div>
     </div>
     <div class="loading"></div>
-</body>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+    <script>
+      let logo = $(".logo");
+      logo.on("click", function () {
+        //logo.hide();
+        //logo.css("display", "none");
+        //logo.css("width", "400px");
+        //logo.css("height", "400px");
+        console.log("using jquery");
+      });
+    </script>
+  </body>
 </html>
