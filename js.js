@@ -33,3 +33,11 @@
 // let num = input("Enter the number: ");
 // console.log(num);
 
+// function add(){
+//     console.log(arguments.length);
+//     console.log(arguments[0] + arguments[1]);
+// }
+// add(10,5);
+
+//console.log(process.argv.slice(2));
+
