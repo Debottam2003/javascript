@@ -84,31 +84,41 @@ catch(err){
 }
 
 //Multiple inheritance in a special way
-// // Mixin 1
-// let CanFly = {
-//     fly() {
-//       console.log(`${this.name} is flying!`);
-//     }
-//   };
+// Mixin 1
+let CanFly = {
+    fly() {
+      console.log(`${this.name} is flying!`);
+    }
+  };
   
-//   // Mixin 2
-//   let CanSwim = {
-//     swim() {
-//       console.log(`${this.name} is swimming!`);
-//     }
-//   };
+  // Mixin 2
+  let CanSwim = {
+    swim() {
+      console.log(`${this.name} is swimming!`);
+    }
+  };
   
-//   // Class that uses the mixins
-//   class Animal {
-//     constructor(name) {
-//       this.name = name;
-//     }
-//   }
+  // Class that uses the mixins
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  }
   
-//   // Apply mixins to the Animal class
-//   Object.assign(Animal.prototype, CanFly, CanSwim);
+  // Apply mixins to the Animal class
+  Object.assign(Animal.prototype, CanFly, CanSwim);
   
-//   let duck = new Animal('Duck');
-//   duck.fly();  // Output: Duck is flying!
-//   duck.swim(); // Output: Duck is swimming!
+  let duck = new Animal('Duck');
+  duck.fly();  // Output: Duck is flying!
+  duck.swim(); // Output: Duck is swimming!
   
+
+  function set(name, roll){
+    this.name = name;
+    this.roll = roll;
+    return this;
+  }
+
+  let obj1 = new set("debottam kar", 1);
+  let obj2 = new set("sritama kar", 1);
+  console.log(obj1.name, obj2.name);
