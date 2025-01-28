@@ -67,8 +67,8 @@ const { Worker } = require('worker_threads');
 
 // Create a new worker thread and pass data to it
 // './worker.js' is the worker script, and 'workerData' carries initial data for the worker
-let worker = new Worker('./worker.js', { workerData: "hi i am Debottam" });
-
+let worker = new Worker('./worker.js');
+worker.postMessage("i am debottam kar");
 // Listen for messages sent from the worker thread
 worker.on('message', (data) => {
     console.log(data); // Log the message received from the worker
