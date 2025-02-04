@@ -10,11 +10,15 @@ const { parentPort, workerData } = require('worker_threads');
 // Log the data received from the main thread
 console.log("Worker thread received: " + workerData);
 
-// Perform a CPU-intensive task
-let c = 1;
-for (let i = 0; i < 5000000000; i++) {
-    c += i;
-}
+// parentPort.on('message', (data)=>{
+//     console.log("Worker thread received: " + data);
+    let c = 1;
+    for (let i = 0; i < 5000000000; i++) {
+        c += i;
+    }
+    // Send the result back to the main thread
+    parentPort.postMessage(`Hi, I am the worker, and my job is done. Result: ${c}`);  
+//})
 
-// Send the result back to the main thread
-parentPort.postMessage(`Hi, I am the worker, and my job is done. Result: ${c}`);
+// Perform a CPU-intensive task
+
