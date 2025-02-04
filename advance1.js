@@ -120,3 +120,14 @@
 //     await api("rainy");
 //     await api("sunny");
 // })();
+
+function print(){
+    console.log("my name is debottam kar");
+}
+
+function call() {
+    for (let i = 0; i < 5; i++) {
+        setTimeout(print, i * 2000);
+    }
+}
+call();
