@@ -120,15 +120,3 @@
 //     await api("rainy");
 //     await api("sunny");
 // })();
-
-// for(let i = 1; i <= 10; i++){
-//     setTimeout(()=>{
-//         console.log(i);
-//     },1000 * i);
-// }
-
-for(let i = 10; i >= 1; i--){
-    setTimeout(()=>{
-        console.log(i);
-    },1000 * (11 - i));
-}
