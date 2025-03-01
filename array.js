@@ -9,13 +9,13 @@ console.log(arr);
 let marks = [];
 marks = [99,96,95,91,90,85,84];
 console.log(marks);
-// const user = {
-//     id : "Debottam",
-//     age : 21
-// }
-// for (let i in user){
-//     console.log(user[i])
-// }
+const user = {
+    id : "Debottam",
+    age : 21
+}
+for (let i in user){
+    console.log(user[i])
+}
 let sum = 0;
 for(let i = 0;i < marks.length;i++){
     sum += marks[i];
