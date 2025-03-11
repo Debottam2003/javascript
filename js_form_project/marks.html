@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        width: 100px;
+      }
+      input {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result">
+      <form>
+        <label>Bengali</label
+        ><input type="number" max="100" min="0" class="bengali" required />
+        <label>English</label
+        ><input type="number" max="100" min="0" class="english" required />
+        <label>Mathematics</label
+        ><input type="number" max="100" min="0" class="mathematics" required />
+        <label>Physical Science</label
+        ><input
+          type="number"
+          max="100"
+          min="0"
+          class="physical_science"
+          required
+        />
+        <label>Life Scicence</label
+        ><input type="number" max="100" min="0" class="life_science" required />
+        <label>History</label
+        ><input type="number" max="100" min="0" class="history" required />
+        <label>Geography</label
+        ><input type="number" max="100" min="0" class="geography" required />
+        <button type="submit">Calculate</button>
+        <span
+          ><h3>
+            Percentage of Marks:
+            <h3 class="marks">0</h3>
+          </h3></span
+        >
+      </form>
+    </div>
+    <script>
+      let bengali = document.querySelector(".bengali");
+      let english = document.querySelector(".english");
+      let mathematics = document.querySelector(".mathematics");
+      let physical_science = document.querySelector(".physical_science");
+      let life_science = document.querySelector(".life_science");
+      let history = document.querySelector(".history");
+      let geography = document.querySelector(".geography");
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (ev) => {
+        if (
+          Number(bengali.value) > 100 ||
+          Number(english.value) > 100 ||
+          Number(mathematics.value) > 100 ||
+          Number(physical_science.value) > 100 ||
+          Number(life_science.value) > 100 ||
+          Number(history.value) > 100 ||
+          Number(geography.value) > 100
+        ) {
+          window.alert("Marks can not be more than 100 for each subjects...");
+        //} else {
+          ev.preventDefault();
+          let average =
+            (Number(bengali.value) +
+              Number(english.value) +
+              Number(mathematics.value) +
+              Number(physical_science.value) +
+              Number(life_science.value) +
+              Number(history.value) +
+              Number(geography.value)) / 7;
+          let marks = document.querySelector(".marks");
+          marks.innerHTML = average.toFixed(3);
+          console.log(marks);
+          ev.target.reset();
+        }
+      });
+    </script>
+  </body>
+</html>
