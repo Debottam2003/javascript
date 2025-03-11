@@ -3,95 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Marks Calculator</title>
     <style>
+      body {
+        display: flex;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        font-family: Arial, sans-serif;
+        color: #fff;
+      }
+
       .result {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100vh;
       }
+
       form {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 500px;
-        width: 100px;
+        gap: 15px;
+        width: 320px;
       }
+
+      label {
+        font-weight: bold;
+      }
+
       input {
-        width: 200px;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .marks-display {
+        margin-top: 20px;
+        background: #00f2fe;
+        color: #333;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <div class="result">
       <form>
-        <label>Bengali</label
-        ><input type="number" max="100" min="0" class="bengali" required />
-        <label>English</label
-        ><input type="number" max="100" min="0" class="english" required />
-        <label>Mathematics</label
-        ><input type="number" max="100" min="0" class="mathematics" required />
-        <label>Physical Science</label
-        ><input
-          type="number"
-          max="100"
-          min="0"
-          class="physical_science"
-          required
-        />
-        <label>Life Scicence</label
-        ><input type="number" max="100" min="0" class="life_science" required />
-        <label>History</label
-        ><input type="number" max="100" min="0" class="history" required />
-        <label>Geography</label
-        ><input type="number" max="100" min="0" class="geography" required />
+        <label>Bengali</label>
+        <input type="number" max="100" min="0" class="bengali" required />
+        <label>English</label>
+        <input type="number" max="100" min="0" class="english" required />
+        <label>Mathematics</label>
+        <input type="number" max="100" min="0" class="mathematics" required />
+        <label>Physical Science</label>
+        <input type="number" max="100" min="0" class="physical_science" required />
+        <label>Life Science</label>
+        <input type="number" max="100" min="0" class="life_science" required />
+        <label>History</label>
+        <input type="number" max="100" min="0" class="history" required />
+        <label>Geography</label>
+        <input type="number" max="100" min="0" class="geography" required />
         <button type="submit">Calculate</button>
-        <span
-          ><h3>
-            Percentage of Marks:
-            <h3 class="marks">0</h3>
-          </h3></span
-        >
+        <div class="marks-display">Percentage of Marks: <span class="marks">0</span>%</div>
       </form>
     </div>
+
     <script>
-      let bengali = document.querySelector(".bengali");
-      let english = document.querySelector(".english");
-      let mathematics = document.querySelector(".mathematics");
-      let physical_science = document.querySelector(".physical_science");
-      let life_science = document.querySelector(".life_science");
-      let history = document.querySelector(".history");
-      let geography = document.querySelector(".geography");
       let form = document.querySelector("form");
       form.addEventListener("submit", (ev) => {
-        if (
-          Number(bengali.value) > 100 ||
-          Number(english.value) > 100 ||
-          Number(mathematics.value) > 100 ||
-          Number(physical_science.value) > 100 ||
-          Number(life_science.value) > 100 ||
-          Number(history.value) > 100 ||
-          Number(geography.value) > 100
-        ) {
-          window.alert("Marks can not be more than 100 for each subjects...");
-        //} else {
-          ev.preventDefault();
-          let average =
-            (Number(bengali.value) +
-              Number(english.value) +
-              Number(mathematics.value) +
-              Number(physical_science.value) +
-              Number(life_science.value) +
-              Number(history.value) +
-              Number(geography.value)) / 7;
-          let marks = document.querySelector(".marks");
-          marks.innerHTML = average.toFixed(3);
-          console.log(marks);
-          ev.target.reset();
+        ev.preventDefault();
+        let subjects = [
+          ".bengali",
+          ".english",
+          ".mathematics",
+          ".physical_science",
+          ".life_science",
+          ".history",
+          ".geography",
+        ];
+        let totalMarks = 0;
+        for (let subject of subjects) {
+          let value = Number(document.querySelector(subject).value);
+          if (value > 100 || value < 0) {
+            alert("Marks can only be between 0 and 100.");
+            return;
+          }
+          totalMarks += value;
         }
+        let average = totalMarks / subjects.length;
+        document.querySelector(".marks").innerHTML = average.toFixed(2);
+        ev.target.reset();
       });
     </script>
   </body>

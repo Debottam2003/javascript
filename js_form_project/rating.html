@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating System</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            width: 90%;
+        }
+        .stars {
+            font-size: 3em;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        .rating-label {
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .rating {
+            width: 100%;
+            margin-top: 10px;
+            accent-color: #ffcc00;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            outline: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="range"]:hover {
+            background: #ffc107;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ffcc00;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="stars">🙂</h1>
+        <div class="rating-label">Rate Us!</div>
+        <form>
+            <input type="range" step="1" max="5" min="0" value="0" class="rating" />
+        </form>
+    </div>
+    <script>
+        let rating = document.querySelector(".rating");
+        let stars = document.querySelector(".stars");
+        rating.addEventListener('input', () => {
+            console.log(rating.value);
+            let starsArray = [];
+            for (let i = 1; i <= Number(rating.value); i++) {
+                starsArray.push("⭐");
+            }
+            stars.innerHTML = starsArray.join("") || "😔";
+        });
+    </script>
+</body>
+</html>
