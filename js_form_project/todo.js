@@ -1,18 +1,14 @@
-let promptSync =  require('prompt-sync');
-
-const input = promptSync();
+let input=  require('prompt-sync')();
 const todo = [];
 
 function main() {
     console.log("<<< TODO LIST >>>");
-
     while (true) {
         console.log("\n......(1.➕ ADD 2.➖ REMOVE 3.CHECK LIST 4.Exit)......");
-        const option = input("Choose an option: ").trim();
-
+        const option = input("Choose an option: ")?.trim();
         switch (option) {
             case '1':
-                const task = input("Enter the Task: ").trim();
+                const task = input("Enter the Task: ")?.trim();
                 if (task === "") {
                     console.log("❗ Task cannot be empty.");
                 } else {
@@ -30,7 +26,7 @@ function main() {
                 console.log("📋 Your To-Do List:");
                 todo.forEach((task, i) => console.log(`${i + 1}. ⭐ ${task}`));
 
-                const removeIdx = input("Enter the task number to remove: ").trim();
+                const removeIdx = input("Enter the task number to remove: ")?.trim();
                 const idx = parseInt(removeIdx, 10);
 
                 if (isNaN(idx) || idx < 1 || idx > todo.length) {
