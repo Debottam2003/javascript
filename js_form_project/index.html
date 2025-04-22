@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #212121;
+    }
+
+    .rating,
+    form>div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80vh;
+        gap: 7px;
+        width: 500px;
+        padding: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 500px;
+        height: 500px;
+        padding: 0;
+    }
+
+    .submit {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 5rem;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .star-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <div class="rating">
+        <form>
+            <div class="star-buttons">
+                <button class="star">&#9733</button>
+                <button class="star">&#9733</button>
+                <button class="star">&#9733</button>
+                <button class="star">&#9733</button>
+                <button class="star">&#9733</button>
+            </div>
+            <textarea placeholder="Give Feedback"></textarea>
+            <input type="submit" class="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        let collection = document.getElementsByClassName("star");
+        let stars = Array.from(collection);
+        let k = 0;
+        stars.forEach((HtmlElement, index) => {
+            HtmlElement.addEventListener("click", (e) => {
+                e.preventDefault();
+                console.log(stars.indexOf(HtmlElement) + 1, index + 1, stars.indexOf(e.currentTarget) + 1);
+                for(let j = 0; j <= k; j++){
+                    stars[j].style.color = "white";
+                }
+                for(let i = 0; i <= index; i++){
+                    stars[i].style.color = "yellow";
+                    k = index;
+                }
+            });
+        });
+        document.querySelector('input[type="submit"]').addEventListener("click", (e) => {
+            e.preventDefault();
+            alert(`Thank you for giving ${k + 1} stars rating...`);
+            console.log(document.querySelector("textarea").value);
+            document.querySelector("form").reset();
+            for(let i = 0; i <= k; i++){
+                    stars[i].style.color = "white";
+                }
+            document.querySelector("textarea").value = "";
+            k = 0;
+        });
+    </script>
+</body>
+
+</html>
