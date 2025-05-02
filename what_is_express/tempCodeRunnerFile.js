@@ -1,0 +1,1 @@
+let marks = Array(3).fill(0);

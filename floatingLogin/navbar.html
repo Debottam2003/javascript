@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Responsive Navbar</title>
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <div class="text-xl font-bold">MySite</div>
+
+    <!-- Full menu for desktop -->
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#" class="hover:text-blue-500">Home</a></li>
+      <li><a href="#" class="hover:text-blue-500">About</a></li>
+      <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+    </ul>
+
+    <!-- Three-dot icon for mobile -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-2xl focus:outline-none">
+        &#8942; <!-- Unicode for vertical ellipsis -->
+      </button>
+    </div>
+  </nav>
+
+  <!-- Dropdown menu for mobile -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white shadow p-4">
+    <a href="#" class="block py-1 hover:text-blue-500">Home</a>
+    <a href="#" class="block py-1 hover:text-blue-500">About</a>
+    <a href="#" class="block py-1 hover:text-blue-500">Contact</a>
+  </div>
+  <script>
+    let navbar = document.getElementById("menu-btn");
+    navbar.addEventListener("click", (e)=>{
+        let menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+    })
+  </script>
+</body>
+</html>
