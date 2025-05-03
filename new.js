@@ -2,6 +2,6 @@
 let date = new Date();
 console.log(date);
 //iif
-(function f(){
+(function f() {
     console.log("hello world");
 })();

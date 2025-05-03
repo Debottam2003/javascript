@@ -1062,7 +1062,7 @@ window.addEventListener('load', async (event) => {
         }
     }
     while (c < 20) {
-       await load();
+        await load();
         c++;
     }
 });
@@ -1096,7 +1096,7 @@ btn3.addEventListener('click', async (event) => {
         }
     }
     while (c < 20) {
-       await load()
+        await load()
         c++;
     }
 });

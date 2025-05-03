@@ -1,5 +1,5 @@
 let div = document.querySelectorAll("div");
-for(let i of div){
+for (let i of div) {
     console.log(i);
     let newelement = document.createElement("div");
     newelement.innerText = "yooooooo! I am deb";
