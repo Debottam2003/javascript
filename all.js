@@ -21,15 +21,15 @@ List of commonly available global objects in Node.js:
 console.log(Object.getOwnPropertyNames(global));
 */
 
-console.log(global);
-console.log(process);
-console.log(Buffer);
-console.log(setTimeout);
-console.log(clearTimeout);
-console.time("Timer");
-console.log(console);
-console.warn("caution!");
-console.timeEnd("Timer");
-console.log(require);
-console.log(mmodule);
-console.log(exports);
+// console.log(global);
+// console.log(process);
+// console.log(Buffer);
+// console.log(setTimeout);
+// console.log(clearTimeout);
+// console.time("Timer");
+// console.log(console);
+// console.warn("caution!");
+// console.timeEnd("Timer");
+// console.log(require);
+// console.log(module);
+// console.log(exports);
