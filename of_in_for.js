@@ -9,7 +9,7 @@ let arr = {
 //     console.log(i);
 // }
 console.log("use of 'in' in for loop");
-for(const i in arr){
+for (const i in arr) {
     console.log(i + " " + arr[i]);
 }
 // console.log("normal for loop");
