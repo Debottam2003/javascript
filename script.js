@@ -4,6 +4,8 @@
 // const v3 = 3;
 // console.log(v1, v2, v3);
 // console.table([{ 'value': v1 }, { 'value': v2 }, { 'value': v3 }]);
+// console.log(typeof v1, typeof v2, typeof v3);
+
 // let myname = "deb";
 // let marks = 99;
 // let cgpa = 8.145;
@@ -385,7 +387,7 @@
 // cart_total(200, 500);
 // cart_total(200, 500, 600);
 
-// let obn ={
+// let obn = {
 //     func : function(){
 //         console.log("function in object");
 //     }
@@ -500,7 +502,7 @@
 // console.log(typeof age);
 // //import prompt from "prompt-sync";
 // //const input = prompt();
-// for(let i =0; i < 5; i++){
+// for(let i = 0; i < 5; i++){
 //    console.log(`${i+1}th item:`);
 //    let x = Number(input());
 //    array.push(x);

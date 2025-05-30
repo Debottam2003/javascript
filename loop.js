@@ -8,33 +8,33 @@ let i = 1;
 //     sum += i;
 // }
 //while loop
-while(i <= 5){
+while (i <= 5) {
     sum += i;
     i++;
 }
 console.log(sum);
 let d = 20;
 //do while loop
-do{
+do {
     console.log("Rony");
-}while(d <= 10);
+} while (d <= 10);
 let str = "debottam kar";
 //for of loop
-for(let i of str){
+for (let i of str) {
     console.log(i);
 }
 const user = {
-    username : "Debottam Kar",
-    age : 21,
-    cgpa : 8.35
+    username: "Debottam Kar",
+    age: 21,
+    cgpa: 8.35
 };
 //for in loop
-for(let key in user){
+for (let key in user) {
     console.log(user[key]);
 }
-for(let i=1;i<=100;i++){
-    if(i %2 === 0){
-    console.log(i);
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
     }
 }
 // let game_number = 3;
@@ -61,7 +61,7 @@ console.log("Debottam\tKar");
 console.log(fullname.toUpperCase());
 console.log(fullname.toLowerCase());
 console.log(fullname.trim());
-console.log(fullname.slice(0,10));
+console.log(fullname.slice(0, 10));
 let n = prompt("Enter your full name:");
 let nm = "@" + n + n.length;
 console.log(nm);
