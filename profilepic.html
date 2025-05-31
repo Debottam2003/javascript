@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      form {
+        background: #ffffff;
+        padding: 30px 30px 25px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 420px;
+        animation: fadeInUp 0.6s ease;
+        text-align: center;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .profile-pic-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #0078d7;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #444;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="file"] {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="file"]:focus {
+        border-color: #0078d7;
+        box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.15);
+        outline: none;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background: #0078d7;
+        color: #fff;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      input[type="submit"]:hover {
+        background: #005fa3;
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 500px) {
+        form {
+          padding: 25px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="profile-pic-wrapper">
+        <img src="#" alt="Profile Preview" id="preview" class="profile-pic" />
+      </div>
+
+      <h2>Profile Form</h2>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="profilepic">Profile Picture:</label>
+      <input type="file" id="profilepic" name="profilepic" accept="image/*" />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      let profilepic = document.getElementById("profilepic");
+      let preview = document.getElementById("preview");
+
+      profilepic.addEventListener("input", (event) => {
+        let file = event.target.files[0];
+        if (!file) return;
+        console.log(file);
+        let objecturl = URL.createObjectURL(file);
+        console.log(objecturl);
+        preview.src = objecturl;
+
+        // Revoke the object URL after the image has loaded
+        preview.onload = () => {
+          URL.revokeObjectURL(objecturl);
+        };
+      });
+    </script>
+  </body>
+</html>

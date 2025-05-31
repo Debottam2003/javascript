@@ -21,19 +21,19 @@ console.log(big);
 console.log(is_top);
 //non-primitive datatype 'object'
 const product = {
-    p_name : "founten pen",
-    price : 259,
-    is_deal : true,
-    offer : 50,
-    rating : 4
+    p_name: "founten pen",
+    price: 259,
+    is_deal: true,
+    offer: 50,
+    rating: 4
 };
 console.log(product);
 const user = {
-    username : "@rony",
-    is_follow : true,
-    followers : 59,
-    following : 71,
-    bio : "Hi I am debottam kar,I love coding,I am pro in it."
+    username: "@rony",
+    is_follow: true,
+    followers: 59,
+    following: 71,
+    bio: "Hi I am debottam kar,I love coding,I am pro in it."
 };
 console.log(user);
 console.log(user.username);
@@ -41,5 +41,5 @@ user.username = "@ronyokudera";
 console.log(user["username"]);
 const check = "1" - 1 + "1";
 console.log(check);
-console.log(2**3);
+console.log(2 ** 3);
 
