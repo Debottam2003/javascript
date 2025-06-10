@@ -120,3 +120,102 @@
 //     await api("rainy");
 //     await api("sunny");
 // })();
+
+console.log("Start world");
+
+setTimeout(()=>{ // macro task queue less priority than micro task queue
+    console.log("this is set time out");
+},0);
+
+async function doit() { // micro task queue high priority than macro task queue
+
+    async function func() {
+        console.log("Hello from async function");// syncronus statement immediately executed
+        // There is no await inside it (or any asynchronous delay like fetch or setTimeout)
+    }
+
+    await func();
+    console.log("yo yo");
+}
+doit();
+
+console.log("End world");
+
+// Step-by-step Execution:
+
+//     console.log("Start world")
+//     → Outputs: Start world
+
+//     doit() is called:
+
+//         It's an async function → returns a promise.
+
+//         It starts executing.
+
+//         Inside it, func() is defined and then called with await.
+
+//     await func():
+
+//         Calls func(), which logs:
+//         → Hello from async function
+
+//         Since func is an async function, it returns a promise that resolves immediately.
+
+//         But because of await, JavaScript yields back to the event loop, and everything after await is deferred to a microtask.
+
+//     Synchronous code continues, so next:
+//     → console.log("End world")
+//     → Outputs: End world
+
+//     Microtask runs (the remainder of doit()):
+//     → console.log("yo yo")
+//     → Outputs: yo yo
+
+// Final Console Output:
+
+// Start world
+// Hello from async function
+// End world
+// yo yo
+
+// Key Insight:
+
+// Even though func() has no actual async delay, the presence of await in doit() means that "yo yo" gets 
+// deferred — await always defers the rest of part of the async function, even if the awaited value is already resolved.
+
+
+// Step-by-Step Execution:
+
+//     console.log("Start world")
+//     → Output: Start world
+
+//     setTimeout(..., 0)
+//     → Registers a macrotask to run after the current call stack and all microtasks.
+
+//     doit() is called
+
+//         It begins running.
+
+//         Inside doit(), func() is called with await.
+
+//         func() runs immediately and logs:
+//         → Output: Hello from async function
+
+//         Then await yields control back to the event loop, and console.log("yo yo") is scheduled as a microtask.
+
+//     console.log("End world")
+//     → Output: End world
+
+//     Microtasks run (queued by await):
+//     → Output: yo yo
+
+//     Macrotasks run (setTimeout):
+//     → Output: this is set time out
+
+// Final Console Output:
+
+// Start world
+// Hello from async function
+// End world
+// yo yo
+// this is set time out
