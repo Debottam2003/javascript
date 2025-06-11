@@ -1,0 +1,12 @@
+At any single point in time, the this reference can only refer to one object, not multiple.
+
+✅ Yes — that's 100% correct across all mainstream programming languages, including Java and JavaScript.
+🔹 Key Concept:
+
+The this reference is not shared across objects. It is contextual — at a specific moment in execution, it points to only one object.
+
+So you're absolutely right to say:
+
+It's like a context-sensitive alias that binds to a specific object in a specific call.
+
+Think of this as a pointer that moves, but never duplicates itself to point to two things(object) at the same time.
