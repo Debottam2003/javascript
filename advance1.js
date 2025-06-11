@@ -14,7 +14,7 @@
 // setTimeout(()=>{calculator(1,2,sum)},5000);
 // calculator(10,5,sum);
 
-const { resolve } = require("path");
+// const { resolve } = require("path");
 
 // ---------callback hell---------
 
@@ -123,39 +123,39 @@ const { resolve } = require("path");
 //     await api("sunny");
 // })();
 
-console.log("Start world");
+// console.log("Start world");
 
-setTimeout(() => { // macro task queue less priority than micro task queue
-    console.log("this is set time out");
-}, 0);
+// setTimeout(() => { // macro task queue less priority than micro task queue
+//     console.log("this is set time out");
+// }, 0);
 
-async function doit() { // micro task queue high priority than macro task queue
+// async function doit() { // micro task queue high priority than macro task queue
 
-    async function func1() {
-        console.log("Hello from async function1");// syncronus statement immediately executed
-        // There is no await inside it (or any asynchronous delay like fetch or setTimeout)
-    }
+//     async function func1() {
+//         console.log("Hello from async function1");// syncronus statement immediately executed
+//         // There is no await inside it (or any asynchronous delay like fetch or setTimeout)
+//     }
 
-    async function func2() {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                console.log("Hello from async function2");
-                resolve("done");
-            }, 2000);
-        });
+//     async function func2() {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log("Hello from async function2");
+//                 resolve("done");
+//             }, 2000);
+//         });
 
-    }
+//     }
 
-    await func1();
-    // Below portion will be suspended suspended and stored in promiseFullfillReactions untill promise is resolved and then will be moved 
-    // to the micro task queue.
-    console.log("yo yo");
-    await func2();
-    console.log("yo yo");
-}
-console.log(doit());
+//     await func1();
+//     // Below portion will be suspended suspended and stored in promiseFullfillReactions untill promise is resolved and then will be moved 
+//     // to the micro task queue.
+//     console.log("yo yo");
+//     await func2();
+//     console.log("yo yo");
+// }
+// console.log(doit());
 
-console.log("End world");
+// console.log("End world");
 
 // Step-by-step Execution:
 
@@ -238,3 +238,116 @@ console.log("End world");
 
 // if use .then then it will stored in promiseFullfillReactions
 // and for .catch promiseRejectReactions
+
+// Call Back Hell
+// function playWithDog(callback) {
+//     setTimeout(() => {
+//         console.log("Play with Dog.");
+//         callback();
+//     }, 2000);
+// }
+
+// function runchores(callback) {
+//     setTimeout(() => {
+//         console.log("runchores.");
+//         callback();
+//     }, 1000);
+// }
+
+// function trashout(callback) {
+//     setTimeout(() => {
+//         console.log("Take the trash out.");
+//         callback();
+//     }, 500);
+// }
+
+// playWithDog(() => {
+//     runchores(() => {
+//         trashout(()=> {
+//             console.log("All works are done.");
+//         })
+//     });
+// })
+
+// Promise .then .catch
+// function playWithDog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Play with Dog.");
+//             resolve("Done");
+//         }, 2000);
+//     });
+// }
+
+// function runchores() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Runchores.");
+//             resolve("Done");
+//             // reject("undone");
+//         }, 1000);
+//     });
+// }
+
+// function trashout() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Take the trash out.");
+//             resolve("Done");
+//             // reject("undone");
+//         }, 500);
+//     });
+// }
+
+// playWithDog()
+//     .then((data) => { return runchores(); })
+//     .then((data) => { return trashout(); })
+//     .then((data) => { console.log("All works are done."); })
+//     .catch((err) => { console.log(err) });
+
+// The functions here returns a promise object
+// instantly that which is in panding state
+// then the Promise is resolved and state
+// becomes fullfilled then the .then portion
+// gets executed and if the promise state become
+// rejected then the .catch portion getes executed
+
+// Async Await
+
+function playWithDog() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Play with Dog.");
+            resolve("Done");
+        }, 2000);
+    });
+}
+
+function runchores() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Runchores.");
+            resolve("Done");
+            // reject("undone");
+        }, 2000);
+    });
+}
+
+function trashout() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Take the trash out.");
+            resolve("Done");
+            // reject("undone");
+        }, 2000);
+    });
+}
+
+async function run() {
+    await playWithDog();// suspended code area
+    await runchores();
+    await trashout();
+    console.log("All works are done.");
+}
+
+run();
