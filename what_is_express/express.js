@@ -19,14 +19,16 @@ console.log(express.json());
 console.log(express.prototype);
 
 // .prototype exists only on constructor functions, 
-// like Array, Object, Function, String, Number, Boolean, Set, Map etc 
+// like Array, Object, Function, String, Number, Boolean, Set, Map, Error, Date, RegExp etc 
 // or your own custom functions (like express above example).
 
 // A prototype in JavaScript is an object that other objects inherit properties and methods from. 
-// Every function in JavaScript has a prototype property, and when you create an object using 
+// Every constructor function in JavaScript has a prototype property, and when you create an object using 
 // a constructor function, that object gets linked to the constructor’s prototype.
 
 // The prototype is a blueprint for objects to share common behavior (methods/properties).
+// Like methods and propertices are added with class same here all constrcutor functions have a prototype
+// object in it methods and propertices are attached.
 
 console.log(Array.prototype);
 console.log(Object.prototype);
@@ -121,3 +123,11 @@ console.log(car1);
 console.log(car2);
 car1.start(); // Car started
 car2.start(); // Car started
+
+let marksArray1 = Array(3).fill(0);
+let marksArray2 = Array(3).fill(3);
+console.log(marksArray1);
+
+let args = [1, 2, 3];
+args.length = 10;
+console.log(args);
