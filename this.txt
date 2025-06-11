@@ -10,3 +10,6 @@ So you're absolutely right to say:
 It's like a context-sensitive alias that binds to a specific object in a specific call.
 
 Think of this as a pointer that moves, but never duplicates itself to point to two things(object) at the same time.
+
+*** 'this' is just a pointer that points/references to an object at any specific moment in the execution lifecycle,
+and the object is by which the current method or constructor function is called 
