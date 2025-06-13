@@ -28,7 +28,7 @@ let h = document.querySelector(".head");
 // for(let i=0;i<tags.length;i++){
 //     console.log(tags[i].innerText);
 //     console.log(tags[i].innerHTML);
-    //console.log(tags[i].innerContent);
+//console.log(tags[i].innerContent);
 //}
 //Not useable have some issues to iterate over nodelists
 //for(let i in tags){
@@ -42,8 +42,8 @@ let user = document.querySelector(".username");
 // console.log(user.getAttribute("value"));
 // console.log(user.getAttribute("type"));
 // console.log(user.getAttribute("placeholder"));
-user.style.color="red";
-user.style.backgroundColor="black";
+user.style.color = "red";
+user.style.backgroundColor = "black";
 // let new_btn = document.createElement("br");
 let love = document.querySelector(".love");
 // love.append(new_btn);

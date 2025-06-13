@@ -12,12 +12,12 @@ console.log("Worker thread received: " + workerData);
 
 // parentPort.on('message', (data)=>{
 //     console.log("Worker thread received: " + data);
-    let c = 1;
-    for (let i = 0; i < 5000000000; i++) {
-        c += i;
-    }
-    // Send the result back to the main thread
-    parentPort.postMessage(`Hi, I am the worker, and my job is done. Result: ${c}`);  
+let c = 1;
+for (let i = 0; i < 5000000000; i++) {
+    c += i;
+}
+// Send the result back to the main thread
+parentPort.postMessage(`Hi, I am the worker, and my job is done. Result: ${c}`);
 //})
 
 // Perform a CPU-intensive task

@@ -36,18 +36,40 @@ let button = document.querySelector("button");
 //     body.style.backgroundColor = "white";
 // }
 let mode = "light";
-button.addEventListener("click",(e)=>{
-       let body = document.querySelector("body");
-       if(mode === "light"){
-       body.style.backgroundColor = "black";
-       mode = "dark";
-       }
-       else{
-        body.style.backgroundColor = "white";
-        mode = "light";
-       }
- });
+button.addEventListener("click", (e) => {
+      let body = document.querySelector("body");
+      if (mode === "light") {
+            body.style.backgroundColor = "black";
+            mode = "dark";
+      }
+      else {
+            body.style.backgroundColor = "white";
+            mode = "light";
+      }
+});
 // button.addEventListener("dblclick",(e)=>{
 //     let body = document.querySelector("body");
 //     body.style.backgroundColor = "white";
 // });
+
+/*
+Some common DOM events are:
+- click
+- dblclick
+- mouseover
+- mouseout
+- mousedown
+- mouseup
+- keydown
+- keyup
+- keypress
+- input
+- change
+- submit
+- focus
+- blur
+- load
+- unload
+- scroll
+- resize
+*/
