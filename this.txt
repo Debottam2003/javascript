@@ -1,4 +1,4 @@
-At any single point in time, the this reference can only refer to one object, not multiple.
+At any single point in time, 'this' can only refer or point to one object, not multiple.
 
 ✅ Yes — that's 100% correct across all mainstream programming languages, including Java and JavaScript.
 🔹 Key Concept:

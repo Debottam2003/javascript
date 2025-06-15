@@ -11,7 +11,7 @@ cookievar.addEventListener('click', () => {
     firstname.value = getcookie("user1f");
     lastname.value = getcookie("user1l");
 })
-// document.cookie = "firstname=deb; expires = 1 January 2000 12:00:00 UTC;psth=/";
+// document.cookie = "firstname=deb; expires = 1 January 2000 12:00:00 UTC;path=/";
 //document.cookie = "name=debottamkar; expires = 1 January 2000 12:00:00 UTC;path=/";
 // console.log(document.cookie);
 // document.cookie = "name=debottamkar; expires = 1 January 2000 12:00:00 UTC;path=/";

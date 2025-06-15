@@ -24,28 +24,33 @@
 // console.log();
 
 // let array = [7, 8, 9, 2, 3, 5, 10, 13];
+
 // //normal for loop
 // console.log("normal for loop");
 // for (let i = 0; i < array.length; i++) {
 //     console.log(array[i]);
 // }
+
 // //for in loop
 // console.log("for in loop");
 // for (let i in array) {
 //     process.stdout.write(array[i] + " ");
 // }
 // console.log();
+
 // //for of loop
 // console.log("for of loop");
 // for (let i of array) {
 //     process.stdout.write(i + "\n");
 // }
 // console.log();
+
 // //for each loop using normal function
 // console.log("for each loop using normal function");
 // array.forEach(function (val) {
 //     console.log(val);
 // });
+
 // //for each loop using arrow function
 // console.log("for each loop using arrow function");
 // array.forEach((val) => {
@@ -57,10 +62,12 @@
 //     console.log("while loop");
 //     check = false;
 // }
+
 // do {
 //     console.log("while loop");
 //     check = false;
 // } while (check);
+
 // let fullname = "debottam kar";
 // for (let i of fullname) {
 //     console.log(i);
@@ -100,6 +107,8 @@
 // console.log(l3);
 // l3.push(0, 0, 0, 0);
 // console.log(l3);
+
+// ***Spread Operator
 // let l4 = [...l3, 100, 200, 300];
 // console.log(l4);
 
@@ -436,6 +445,7 @@
 // catch (error) {
 //     console.error(error.message);
 // }
+
 // exception
 // try {
 //     console.log(eval("10+"));
@@ -461,6 +471,7 @@
 // catch (e) {
 //     console.error(e.message);
 // }
+
 // exception
 // try {
 //     let arr = JSON.parse('[7,8,9,2,3,5,10,13]');
@@ -471,6 +482,7 @@
 // catch (e) {
 //     console.error(e.message);
 // }
+
 // let btn = document.querySelectorAll('button');
 // btn.forEach((b) => {
 //     b.addEventListener('click', (e) => {
@@ -797,16 +809,22 @@ add_btn.forEach((b)=>{
 
 
 // let list = [7, 8, 9, 2, 3, 5, 10, 13];
+
+//.........Map Filter Reduce.........
+
 // let l = list.filter((i) => {
 //     return i > 4;
 // });
 // console.log(l);
+
 // l = list.map((i) => { return i * 2; }).map((num) => { return num + 3 });
 // console.log(l);
+
 // l = list.reduce(()=>{})
 // for (let i in list) {
 //     console.log(list[i]);
 // }
+
 // for (let i of list) {
 //     console.log(i);
 // }

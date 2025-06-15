@@ -42,7 +42,7 @@ let btn = document.querySelector("#btn");
 const getFacts = async () => {
     const response = await fetch(URL);
     console.log(response);
-    return response.json();
+    return await response.json();
 }
 btn.onclick = async () => {
     let fact_text = await getFacts();
