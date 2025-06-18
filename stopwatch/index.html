@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #232526;
+        background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+      }
+      .stopwatch-container {
+        background: #2c3e50;
+        padding: 2rem 3rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #display {
+        font-size: 3rem;
+        color: #fff;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+      .button-group {
+        display: flex;
+        gap: 1rem;
+      }
+      button {
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        background: #3498db;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+      }
+      button#stop {
+        background: #e74c3c;
+      }
+      button#reset {
+        background: #f1c40f;
+        color: #232526;
+      }
+      button:hover {
+        transform: translateY(-2px) scale(1.05);
+        filter: brightness(1.1);
+      }
+      @media (max-width: 600px) {
+        .stopwatch-container {
+          padding: 1.2rem 0.5rem;
+          border-radius: 12px;
+          width: 95vw;
+          min-width: 0;
+        }
+        #display {
+          font-size: 2rem;
+          margin-bottom: 1.2rem;
+        }
+        .button-group {
+          flex-direction: column;
+          gap: 0.7rem;
+          width: 100%;
+        }
+        button {
+          width: 100%;
+          font-size: 1rem;
+          padding: 0.7rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stopwatch-container">
+      <h1 id="display">00:00:00:000</h1>
+      <div class="button-group">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+      </div>
+    </div>
+    <script>
+      let area = document.getElementById("display");
+      let start = document.getElementById("start");
+      let Stop = document.getElementById("stop");
+      let reset = document.getElementById("reset");
+
+      let interval = null,
+        startTime = 0,
+        elapsed = 0;
+
+      function display() {
+        let ms = Date.now() - startTime + elapsed;
+        let h = String(Math.floor(ms / (60 * 60 * 1000))).padStart(2, 0);
+        ms = ms % (60 * 60 * 1000);
+        let m = String(Math.floor(ms / (60 * 1000))).padStart(2, "0");
+        ms = ms % (60 * 1000);
+        let s = String(Math.floor(ms / 1000)).padStart(2, "0");
+        let msStr = String(ms % 1000).padStart(3, "0");
+
+        //   let time = new Date(ms);
+        //   let h = String(time.getUTCHours()).padStart(2, 0);
+        //   let m = String(time.getUTCMinutes()).padStart(2, '0');
+        //   let s = String(time.getUTCSeconds()).padStart(2, '0');
+        //   let msStr = String(ms % 1000).padStart(3, '0');
+
+        area.textContent = `${h}:${m}:${s}:${msStr}`;
+      }
+
+      function startHandle() {
+        if (!interval) {
+          // very import checking
+          startTime = Date.now();
+          interval = setInterval(display, 50);
+        }
+      }
+      function stopHandle() {
+        if (interval) {
+          clearInterval(interval);
+          interval = null;
+          elapsed += Date.now() - startTime;
+        }
+      }
+      function resetHandle() {
+        clearInterval(interval);
+        startTime = 0;
+        elapsed = 0;
+        interval = null;
+        area.textContent = "00:00:00:000";
+      }
+
+      start.addEventListener("click", startHandle);
+      Stop.addEventListener("click", stopHandle);
+      reset.addEventListener("click", resetHandle);
+    </script>
+  </body>
+</html>
