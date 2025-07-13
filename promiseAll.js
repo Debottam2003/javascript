@@ -29,6 +29,20 @@ Promise.all([fetchUser, fetchPosts, fetchComments])
     console.error("Something failed:", err);
   });
 
+Promise.all([fetch('/api/user'), fetch('/api/posts'), fetch('/api/comments')])
+  .then(async ([userRes, postsRes, commentsRes]) => {
+    const [user, posts, comments] = await Promise.all([
+      userRes.json(),
+      postsRes.json(),
+      commentsRes.json(),
+    ]);
+    console.log({ user, posts, comments });
+  })
+  .catch(err => {
+    console.error("Something failed:", err);
+  });
+
+
 Promise.allSettled([p1, p2, p3])
   .then(results => {
     console.log(results);
