@@ -122,3 +122,16 @@ function set(name, roll) {
 let obj1 = new set("debottam kar", 1);
 let obj2 = new set("sritama kar", 1);
 console.log(obj1.name, obj2.name);
+
+
+
+// class Node {
+//     constructor(id) {
+//         this.id = id;
+//     }
+//     one() {
+//         console.log("This is one");
+//     }
+// }
+// console.log(new Node(1));
+// new Node(1).one();
