@@ -7,10 +7,11 @@ let fullname = "rony";
 let age = 21;
 const cgpa = 8.15;
 let is_top = true;
-let p = null;
-let job;
-let s = Symbol("hello");
-let big = BigInt("123456");
+let p = null; // holds nothing 
+let job = undefined; // no value assigned
+let s = Symbol("hello"); // A Symbol is a special data type in JavaScript. It creates a unique value, even for same description
+// let big = BigInt("123456");
+let big = 5745745785478154871478154784n + 78346483464832n;
 console.log(fullname);
 console.log(age);
 console.log(cgpa);
