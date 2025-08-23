@@ -18,3 +18,20 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 // Return type in TypeScript
 // Generator functions return an iterator object that conforms to the Generator interface.
+
+function* oneYield() {
+  yield 42;
+}
+
+function test() {
+  const gen1 = oneYield();
+  const gen2 = oneYield();
+
+  console.log(gen1.next()); // { value: 42, done: false }
+  console.log(gen1.next()); // { value: undefined, done: true }
+
+  console.log(gen2.next()); // { value: 42, done: false }
+  console.log(gen2.next()); // { value: undefined, done: true }
+}
+
+test();
