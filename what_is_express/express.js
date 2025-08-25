@@ -124,9 +124,12 @@ console.log(car2);
 car1.start(); // Car started
 car2.start(); // Car started
 
-let marksArray1 = Array(3).fill(0);
+let marksArray1 = new Array(3).fill(0);
 let marksArray2 = Array(3).fill(3);
 console.log(marksArray1);
+console.log(marksArray2);
+// [ 0, 0, 0 ]
+// [ 3, 3, 3 ]
 
 let args = [1, 2, 3];
 args.length = 10;
