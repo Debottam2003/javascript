@@ -58,3 +58,40 @@ let love = document.querySelector(".love");
 let mark = document.querySelector(".head");
 love.prepend(mark);
 
+console.log(window.screen.width);   // total screen width (monitor resolution)
+console.log(window.screen.height);  // total screen height (monitor resolution)
+
+console.log(window.screenX);  // x-coordinate of the window’s top-left corner on the screen
+console.log(window.screenY);  // y-coordinate of the window’s top-left corner on the screen
+
+console.log(window.scrollX);  // horizontal scroll amount of the document (same as pageXOffset)
+console.log(window.scrollY);  // vertical scroll amount of the document (same as pageYOffset)
+
+console.log(document.body.scrollWidth);
+console.log(document.body.scrollHeight);
+
+console.log(document.body.clientWidth);
+console.log(document.body.clientHeight);
+
+console.log(document.body.scrollTop);
+console.log(document.body.scrollLeft);
+// document.body.scrollTop → The number of pixels the <body> is scrolled vertically.
+
+// document.body.scrollLeft → The number of pixels the <body> is scrolled horizontally.
+
+// ❌ Non-existent properties:
+
+// scrollRight → does not exist, will return undefined.
+
+// scrollBottom → also does not exist, will return undefined.
+
+// ✅ How to compute them yourself:
+
+// Scroll Right: how far you are from the right edge
+
+let scrollRight = document.body.scrollWidth - document.body.clientWidth - document.body.scrollLeft;
+console.log(scrollRight);
+
+let scrollBottom = document.body.scrollHeight - document.body.clientHeight - document.body.scrollTop;
+console.log(scrollBottom);
+
