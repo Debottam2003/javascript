@@ -73,3 +73,7 @@ Some common DOM events are:
 - scroll
 - resize
 */
+
+coupon.dispatchEvent(new Event("input"));
+coupon.dispatchEvent(new Event("click"));
+// triggers an event on that element.
