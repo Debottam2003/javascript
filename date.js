@@ -1,0 +1,11 @@
+let date = new Date();
+console.log(Date.now());
+console.log(date);
+console.log(date.getTime());
+console.log(date.getFullYear());
+console.log(date.getDay() + 1);
+console.log(date.toLocaleDateString());
+console.log(date.toLocaleTimeString());
+console.log(date.toDateString());
+console.log(date.toTimeString());
+console.log(date.toLocaleString());

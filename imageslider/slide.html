@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>Image Slider</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: #f8f9fa;
+    }
+
+    #slider {
+      position: relative;
+      width: 700px;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    button#prev, button#next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    button#prev {
+      left: 10px;
+    }
+
+    button#next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="slider">
+    <div class="slides" id="slides">
+      <img src="https://fastly.picsum.photos/id/76/700/500.jpg?hmac=7-9P49HAqSxytmjD5GaBeoTPCMZrPWqdEsk67ws6xgg" class="slide" alt="">
+      <img src="https://fastly.picsum.photos/id/106/700/500.jpg?hmac=M19iwsBse0jYW2FqEvYdpwHjD2NKE3XGgTBXknajoZw" class="slide" alt="">
+      <img src="https://images.pexels.com/photos/27372390/pexels-photo-27372390/free-photo-of-a-photo-of-a-mountain-with-the-sun-shining.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="slide" alt="">
+    </div>
+    <button id="prev" class="btn btn-primary">Prev</button>
+    <button id="next" class="btn btn-primary">Next</button>
+  </div>
+
+  <script>
+    const slides = document.getElementById("slides");
+    const totalSlides = document.querySelectorAll(".slide").length;
+    let currentIndex = 0;
+
+    function updateSlidePosition() {
+      slides.style.transform = `translateX(-${currentIndex * 700}px)`;
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }
+
+    function prev() {
+      if(currentIndex <= 0) {
+        currentIndex = totalSlides - 1;
+      }
+      else {
+        currentIndex--;
+      }
+      updateSlidePosition();
+    }
+
+    document.getElementById("next").addEventListener("click", next);
+    document.getElementById("prev").addEventListener("click", prev);
+
+    setInterval(next, 3000); // Auto slide every 3 seconds
+  </script>
+</body>
+</html>

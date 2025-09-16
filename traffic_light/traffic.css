@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.outer-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 450px;
+    height: 900px;
+    border-radius: 180px;
+}
+.inner-border{
+    background-color: #414141;
+    width: 350px;
+    height: 800px;
+    border-radius: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.red, .yellow, .green{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.88));
+}
+.red{
+    background-color: rgb(194, 5, 5);
+}
+.yellow{
+    background-color: black;
+}
+.green{
+    background-color: black;
+}
+.bar{
+    width: 200px;
+    height: 800px;
+    background-color: black;
+}

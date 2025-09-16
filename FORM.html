@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="date" class="date_of_birth" />
+        <input type="radio" class="A" name="A" />A
+        <input type="radio" class="B" name="A" />B
+        <input type="radio" class="C" name="A" />C
+        <input type="radio" class="D" name="A" />D
+        <input type="checkbox" name="agree1" class="agree1" />I agree
+        <input type="checkbox" name="agree2" class="agree2" />I agree this too
+        <input type="range" id="rangeInput" class="range" min="0" max="100" step="1" />
+    </form>
+    <button class="done">done</button>
+    
+    <script>
+        let dob = document.querySelector('.date_of_birth');
+        let checker = document.querySelector('.agree1');
+        let btn = document.querySelector('.done');
+        let radio = document.querySelector('input[name="A"]:checked');
+        let range = document.querySelector('.range');
+
+        btn.addEventListener('click',()=>{
+            console.log(dob.value);
+            console.log(checker.checked);
+            console.log(radio.className);
+    (async function () {
+    for (let i = 0; i < 10; i++) {
+        console.log(range.value);
+        range.value = parseInt(range.value) + 10;
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+    })();
+        })
+    </script>
+</body>
+</html>

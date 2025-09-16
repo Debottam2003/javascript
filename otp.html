@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        width: 300px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    input, button{
+        padding: 10px;
+    }
+    button{
+        background-color: rgb(169, 169, 239);
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <form>
+        <input type="email" placeholder="Enter Email" />
+        <input type="text" placeholder="Enter OTP" />
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        console.log(form);
+        const submit = document.querySelector('button');
+        submit.addEventListener('click', (e)=>{
+            e.preventDefault();
+            const email = form[0].value;
+            const confirm = window.confirm("Are you sure you want to submit?");
+            if(confirm){
+                alert("Form submitted successfully!");
+                // form.submit();
+                console.log(email, form[1].value);
+                form.reset();
+            } else {
+                alert("Form submission cancelled.");
+            }
+        });
+    </script>
+</body>
+</html>
