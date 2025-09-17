@@ -38,6 +38,35 @@
 </body>
 <!-- <script src="./script.js"></script> -->
  <script>
+// window.addEventListener('load', async () => {
+//  const url = "https://picsum.photos/700/500";
+//  let main = document.querySelector('.main');
+
+  // Create an array of 20 promises
+ // const promises = Array.from({ length: 20 }, async () => {
+ //   const response = await fetch(url);
+ //   const img = document.createElement('img');
+ //   img.style.margin = "0 30px 20px 5px";
+  //  img.setAttribute("src", response.url);
+  //  return img;
+  // });
+
+  // Wait for all to finish
+  // const images = await Promise.all(promises);
+
+  // const results = await Promise.allSettled(promises);
+
+  // const images = results
+  // .filter(r => r.status === "fulfilled")  // only keep successful ones
+  // .map(r => r.value);                     // extract <img> elements
+
+  // main.append(...images);
+
+
+  // Append all at once (faster rendering)
+  // main.append(...images);
+// });
+
   window.addEventListener('load', async (event) => {
     let c = 0;
     //const url = 'https://dog.ceo/api/breeds/image/random';
