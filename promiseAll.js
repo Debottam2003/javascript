@@ -54,3 +54,9 @@ Promise.allSettled([p1, p2, p3])
     ]
     */
   });
+
+const results = await Promise.allSettled([p1, p2, p3]);
+
+const images = results
+  .filter(r => r.status === "fulfilled")  // only keep successful ones
+  .map(r => r.value);                     // extract <img> elements
