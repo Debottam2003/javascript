@@ -5,10 +5,7 @@ console.log(window.innerWidth);
 console.log(window.innerHeight);
 
 console.log(window.scrollX);
-console.log(window.screenY);
-
-console.log(window.outerWidth);
-console.log(window.outerHeight);
+console.log(window.scrollY);
 
 // Key points:
 
