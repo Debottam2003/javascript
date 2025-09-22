@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harmony Music Player - White Theme with Red Accents</title>
+    <title>Enhanced Wireframe Layout - Premium Red Theme</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       :root {
-        --primary-red: #e53935;
-        --dark-red: #b71c1c;
-        --light-red: #ef5350;
+        --primary-red: #c62828;
+        --dark-red: #8e0000;
+        --light-red: #ff5f52;
         --pale-red: #ffebee;
-        --light-bg: #f8f9fa;
-        --card-bg: #ffffff;
-        --surface: #ffffff;
-        --text-primary: #212529;
-        --text-secondary: #6c757d;
-        --accent-gold: #FFC107;
+        --dark-bg: #121212;
+        --card-bg: #1e1e1e;
+        --surface: #252525;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --accent-gold: #ffd54f;
         --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       }
 
       * {
@@ -29,7 +28,7 @@
 
       body {
         font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%);
+        background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
         color: var(--text-primary);
         line-height: 1.6;
         overflow-x: hidden;
@@ -53,15 +52,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(30, 30, 30, 0.85);
         backdrop-filter: blur(10px);
         padding: 1.2rem 2rem;
         border-radius: 12px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         position: sticky;
         top: 15px;
         z-index: 100;
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .logo {
@@ -82,7 +81,7 @@
       }
 
       .logo:hover {
-        color: var(--primary-red);
+        color: var(--light-red);
         transform: translateY(-2px);
       }
 
@@ -126,8 +125,8 @@
       }
 
       .search-bar {
-        background: rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         padding: 0.5rem 1rem;
         color: var(--text-primary);
@@ -139,7 +138,6 @@
         outline: none;
         border-color: var(--primary-red);
         width: 250px;
-        background: rgba(229, 57, 53, 0.05);
       }
 
       .user-icon {
@@ -150,29 +148,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: var(--text-primary);
         font-weight: 600;
         font-size: 1.2rem;
         transition: var(--transition);
         cursor: pointer;
-        box-shadow: 0 4px 10px rgba(229, 57, 53, 0.2);
+        box-shadow: 0 4px 10px rgba(198, 40, 40, 0.3);
       }
 
       .user-icon:hover {
         transform: scale(1.1);
-        box-shadow: 0 6px 15px rgba(229, 57, 53, 0.3);
+        box-shadow: 0 6px 15px rgba(198, 40, 40, 0.5);
       }
 
       .sidebar {
         padding: 1.5rem;
         background: var(--surface);
         border-radius: 12px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         overflow-y: auto;
         position: sticky;
         top: 100px;
         height: calc(100vh - 130px);
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .sidebar h2 {
@@ -196,7 +194,7 @@
 
       .fixed {
         margin-top: 1rem;
-        background: rgba(0, 0, 0, 0.03);
+        background: rgba(255, 255, 255, 0.05);
         padding: 1rem;
         border-radius: 8px;
         font-size: 0.95rem;
@@ -207,7 +205,7 @@
       }
 
       .fixed:hover {
-        background: rgba(229, 57, 53, 0.05);
+        background: rgba(255, 255, 255, 0.1);
         color: var(--text-primary);
         border-left-color: var(--primary-red);
         transform: translateX(5px);
@@ -219,8 +217,8 @@
         overflow-y: auto;
         background: var(--surface);
         border-radius: 12px;
-        box-shadow: var(--shadow);
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .outlet {
@@ -228,7 +226,7 @@
         color: var(--text-primary);
         border-left: 4px solid var(--primary-red);
         padding: 1rem 1.5rem;
-        background: rgba(229, 57, 53, 0.03);
+        background: rgba(255, 255, 255, 0.03);
         border-radius: 8px;
         font-style: italic;
         position: relative;
@@ -256,8 +254,8 @@
       }
 
       .card {
-        background: linear-gradient(135deg, var(--card-bg) 0%, #f8f9fa 100%);
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        background: linear-gradient(135deg, var(--card-bg) 0%, #2a2a2a 100%);
+        border: 1px solid rgba(255, 255, 255, 0.05);
         flex: 1;
         min-width: 200px;
         padding: 1.5rem;
@@ -281,7 +279,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(transparent 40%, rgba(255, 255, 255, 0.8));
+        background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.8));
         z-index: 1;
       }
 
@@ -317,7 +315,7 @@
       .card:hover {
         border-color: var(--primary-red);
         transform: translateY(-8px);
-        box-shadow: 0 12px 25px rgba(229, 57, 53, 0.15);
+        box-shadow: 0 12px 25px rgba(198, 40, 40, 0.2);
       }
 
       .card:nth-child(1) {
@@ -344,11 +342,11 @@
         padding: 1.5rem;
         border-radius: 12px;
         color: var(--text-primary);
-        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .player-controls {
@@ -358,7 +356,7 @@
       }
 
       .control-btn {
-        background: rgba(0, 0, 0, 0.04);
+        background: rgba(255, 255, 255, 0.08);
         border: none;
         border-radius: 50%;
         width: 3rem;
@@ -373,26 +371,24 @@
 
       .control-btn:hover {
         background: var(--primary-red);
-        color: white;
         transform: scale(1.1);
       }
 
       .play-btn {
         background: var(--primary-red);
-        color: white;
         width: 3.5rem;
         height: 3.5rem;
       }
 
       .play-btn:hover {
         background: var(--light-red);
-        box-shadow: 0 0 15px rgba(229, 57, 53, 0.3);
+        box-shadow: 0 0 15px rgba(198, 40, 40, 0.5);
       }
 
       .progress-bar {
         flex: 1;
         height: 4px;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 2px;
         position: relative;
         margin: 0 1.5rem;
@@ -417,8 +413,7 @@
         height: 12px;
         background: white;
         border-radius: 50%;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
       }
 
       .track-info {
@@ -442,12 +437,6 @@
       .track-details p {
         font-size: 0.8rem;
         color: var(--text-secondary);
-      }
-
-      .time {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        min-width: 80px;
       }
 
       @media (max-width: 1024px) {
