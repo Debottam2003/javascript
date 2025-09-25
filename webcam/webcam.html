@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Webcam Mirror</title>
   </head>
   <body style="padding: 0; margin: 0;">
-    <video src="#" style="width: 100%; height: 100vh" autoplay controls></video>
+    <video
+      style="width: 100%; height: 100vh; object-fit: cover; transform: scaleX(-1);"
+      autoplay
+      playsinline
+      controls
+    ></video>
     <script>
       async function webcam() {
-        let stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        document.querySelector("video").srcObject = stream;
-        // document.querySelector("video").autoplay = true;
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          document.querySelector("video").srcObject = stream;
+        } catch (err) {
+          console.error("Error accessing webcam:", err);
+        }
       }
       webcam();
     </script>
