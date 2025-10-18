@@ -1,11 +1,11 @@
 // console.log("one");
 // console.log("two");
 // setTimeout(()=>{
-//     console.log("hello");
+//  console.log("hello");
 // },2000);//timeout
 // console.log("three");
 // console.log("four");
-//function sum(a,b){
+// function sum(a,b){
 //     console.log(a + b);
 // }
 // function calculator(a,b,sumcallback){

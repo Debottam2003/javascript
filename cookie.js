@@ -12,12 +12,12 @@ cookievar.addEventListener('click', () => {
     lastname.value = getcookie("user1l");
 })
 // document.cookie = "firstname=deb; expires = 1 January 2000 12:00:00 UTC;path=/";
-//document.cookie = "name=debottamkar; expires = 1 January 2000 12:00:00 UTC;path=/";
+// document.cookie = "name=debottamkar; expires = 1 January 2000 12:00:00 UTC;path=/";
 // console.log(document.cookie);
 // document.cookie = "name=debottamkar; expires = 1 January 2000 12:00:00 UTC;path=/";
 // console.log(document.cookie);
-//const d = new Date();
-//console.log(date.toUTCString());
+// const d = new Date();
+// console.log(date.toUTCString());
 function setcookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
@@ -31,7 +31,7 @@ function setcookie(name, value, days) {
 // }
 // delcookie("age1");
 // console.log(document.cookie,"done");
-//console.log(document.cookie);
+// console.log(document.cookie);
 function getcookie(name) {
     const cdecoded = decodeURIComponent(document.cookie);
     const carray = cdecoded.split("; ");
@@ -44,4 +44,4 @@ function getcookie(name) {
     })
     return res;
 }
-//console.log(getcookie("age2"));
+// console.log(getcookie("age2"));

@@ -1,4 +1,4 @@
-//let arr = [7,8,9,2,3,5,10,13];
+// let arr = [7,8,9,2,3,5,10,13];
 let arr = {
     name: "debottam kar",
     roll: 1,

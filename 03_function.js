@@ -1,5 +1,5 @@
 // function myfunction(){ // function definition
-//     console.log("I am Rony.");
+// console.log("I am Rony.");
 // }
 // myfunction();//function call/invoke
 // myfunction();
@@ -10,7 +10,7 @@ function sum(a, b) {
 }
 let s = sum(5, 10);
 console.log(s);
-//Arrow function
+// Arrow function
 const mul = (a, b) => {
     console.log(a * b);
 }
@@ -18,7 +18,7 @@ mul(2, 18);
 const print = () => console.log("hello");
 print();
 let arr = [7, 8, 9, 5, 2, 3];
-//Call back function / higher order function/method
+// Call back function / higher order function/method
 arr.forEach(function value(val) {
     console.log(val);
 });

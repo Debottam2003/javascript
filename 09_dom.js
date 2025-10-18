@@ -28,15 +28,15 @@ let h = document.querySelector(".head");
 // for(let i=0;i<tags.length;i++){
 //     console.log(tags[i].innerText);
 //     console.log(tags[i].innerHTML);
-//console.log(tags[i].innerContent);
+// console.log(tags[i].innerContent);
 //}
-//Not useable have some issues to iterate over nodelists
-//for(let i in tags){
+// Not useable have some issues to iterate over nodelists
+// for(let i in tags){
 //     console.log(tags[i].innerText);
 //     console.log(tags[i].innerHTML);
 // }
-//tag.innerHTML = "<div> Hi I am New</div>";
-//console.log(tag.textContent = "hi");
+// tag.innerHTML = "<div> Hi I am New</div>";
+// console.log(tag.textContent = "hi");
 let user = document.querySelector(".username");
 // console.log(user.getAttribute("name"));
 // console.log(user.getAttribute("value"));
@@ -51,10 +51,10 @@ let love = document.querySelector(".love");
 // new_btn.innerText = "love";
 // love.append(new_btn);
 // new_btn.style.color="blue";
-//node.append(el)
-//node.prepend(el)
-//node.before(el)
-//node.after(el)
+// node.append(el)
+// node.prepend(el)
+// node.before(el)
+// node.after(el)
 let mark = document.querySelector(".head");
 love.prepend(mark);
 

@@ -1,7 +1,7 @@
 console.log("My name is Debottam Kar")
 // window.alert("stop");
-//primitive data types
-//seven (number,string,Symbol,boolean,null,undefined,BigInt)
+// primitive data types
+// seven (number,string,Symbol,boolean,null,undefined,BigInt)
 console.log("ichinose");
 let fullname = "rony";
 let age = 21;
@@ -20,7 +20,7 @@ console.log(job);
 console.log(s);
 console.log(big);
 console.log(is_top);
-//non-primitive datatype 'object'
+// non-primitive datatype 'object'
 const product = {
     p_name: "founten pen",
     price: 259,

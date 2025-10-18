@@ -47,5 +47,5 @@ arr3.shift();
 console.log(arr3);
 console.log(arr3.slice(0, 5));
 console.log(arr3.slice(0, 5));
-console.log(arr3.splice(2, 2, 10, 21));//*important and very useful
+console.log(arr3.splice(2, 2, 10, 21));// important and very useful
 console.log(arr3);

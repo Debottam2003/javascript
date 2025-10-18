@@ -12,7 +12,7 @@
 //     sumcallback(a,b);
 // }
 // setTimeout(()=>{calculator(1,2,sum)},5000);
-//calculator(10,5,sum);
+// calculator(10,5,sum);
 
 //---------callback hell---------
 
@@ -32,7 +32,7 @@
 //     });
 // });
 
-//getData(5);
+// getData(5);
 // getData(6);
 
 //---------promises---------
@@ -53,7 +53,7 @@
 //     },10000);
 //          })
 // }
-//const getpromise = ()=> 
+// const getpromise = ()=> 
 // function getpromise(){
 //     return new Promise((resolve,reject) => {
 //            console.log("I am Rony.");

@@ -7,7 +7,7 @@ let citytemp = document.querySelector(".temp");
 let cityhumidity = document.querySelector(".humidity");
 let weatherdescription = document.querySelector(".description");
 let icon = document.querySelector(".icon");
-//btn.addEventListener('click',(evt)=>{
+// btn.addEventListener('click',(evt)=>{
 // if(city.value.toLowerCase() !== "kolkata"){
 //     error.style.display = "none";
 //     ermsg.style.display = "flex";
@@ -37,7 +37,7 @@ async function apiwork() {
 async function getdata(city) {
   const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
   let response = await fetch(apiurl);
-  //console.log(response);
+  // console.log(response);
   if (!response.ok) {
     showerror();
   }
@@ -45,7 +45,7 @@ async function getdata(city) {
     return await response.json();
 }
 function showdata(data) {
-  //console.log(data);
+  // console.log(data);
   error.style.display = "flex";
   ermsg.style.display = "none";
   const { name: city,

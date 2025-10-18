@@ -28,7 +28,7 @@
 //     }
 // }
 // student.__proto__ = teacher;
-//student.__proto__ = human;
+// student.__proto__ = human;
 // Object.assign(student, human, teacher);
 // console.log(student.t_name);
 // console.log(student.age);

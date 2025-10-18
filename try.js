@@ -49,7 +49,7 @@
 // function greet() {
 //     console.log(this);
 // }
-// greet(); 
+// greet();
 
 // let age1 = 22;
 // function greet(age2) {

@@ -1,4 +1,4 @@
-//Arithmetic Operator
+// Arithmetic Operator
 let a = 10, b = 5;
 console.log("a + b = ", a + b);
 console.log("a - b = ", a - b);
@@ -6,7 +6,7 @@ console.log("a * b = ", a * b);
 console.log("a / b = ", a / b);
 console.log("a % b = ", a % b);
 console.log("a ^ b = ", a ** b);
-//Unary operator
+// Unary operator
 a++;
 console.log("a = ", a);
 a += 1;
@@ -16,7 +16,7 @@ console.log("a = ", a);
 console.log("++a = ", ++a);
 console.log("a++ = ", a++);
 console.log("a = ", a);
-//Assignment Operator
+// Assignment Operator
 a = 2;
 console.log("a = ", a);
 a += 4;
@@ -32,7 +32,7 @@ console.log("a = ", a);
 a = 2;
 a **= 2;
 console.log("a = ", a);
-//Comparison Operator
+// Comparison Operator
 a = 10, b = 5;
 console.log("10 = 5", a == b);
 console.log("10 != 5 ", a != b);
@@ -45,7 +45,7 @@ let s = "123";
 console.log("123 = '123' ", i == s);
 console.log("123 = '123' ", i === s);
 console.log("123 != '123' ", i !== s);
-//Logical Operators
+// Logical Operators
 let x = 6;
 let y = 5;
 let cond1 = x > y;
@@ -54,7 +54,7 @@ console.log("condition_1 && condition_2", cond1 && cond2);
 console.log("condition_1 || condition_2", cond1 || cond2);
 console.log("!condition_1", !cond1);
 
-//Conditional Statements
+// Conditional Statements
 let age = 11;
 if (age > 18) {
     console.log("you can vote");
@@ -79,7 +79,7 @@ else if (num2 > num1 && num2 > num3) {
 else {
     console.log("max = ", num3);
 }
-//Ternary Operator
+// Ternary Operator
 let result = 99;
 let r = result === 100 ? "full marks" : "you got 99/100";
 console.log(r);

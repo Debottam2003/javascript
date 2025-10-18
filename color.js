@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
 let textToCopy = document.querySelector('.color_code');
 let copy = document.querySelector('.copy');
 copy.addEventListener('click', () => {
-    //textToCopy.select();
-    //textToCopy.setSelectionRange(0, 99999);
+    // textToCopy.select();
+    // textToCopy.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(textToCopy.innerText);
 });

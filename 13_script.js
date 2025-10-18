@@ -667,7 +667,7 @@
 // ob.f2();
 // console.log(ob.__proto__);
 
-//let arr = [7, 8, 9, 2, 3, 5, 10, 13];
+// let arr = [7, 8, 9, 2, 3, 5, 10, 13];
 // let new_arr = arr.sort((a, b) => a - b);
 // console.log(new_arr);
 // let a = [11, 12];
@@ -775,9 +775,9 @@ add_btn.forEach((b)=>{
 
 
 
-//let mysym1 = Symbol();
-//let mysym2 = Symbol("mysymbol");
-//console.log(mysym1,mysym2);
+// let mysym1 = Symbol();
+// let mysym2 = Symbol("mysymbol");
+// console.log(mysym1,mysym2);
 
 // let myobj = {
 //     fullname: "deb",
@@ -891,7 +891,7 @@ add_btn.forEach((b)=>{
 
 // console.log(total_price);
 
-//let a = [7, 8, 9, 2, 3, 5, 10, 13, 21, 15];
+// let a = [7, 8, 9, 2, 3, 5, 10, 13, 21, 15];
 // console.log(a);
 // for(let i = 0; i < 5; i++){
 //     if(a.includes(i+2)){
@@ -931,7 +931,7 @@ add_btn.forEach((b)=>{
 // console.log(str.indexOf("eb"));
 
 // console.log('a'.charCodeAt());
-//console.log(String.fromCharCode(98));
+// console.log(String.fromCharCode(98));
 // console.log(a);
 // a = a.filter((i)=> false);
 // console.log(a);
@@ -944,16 +944,16 @@ add_btn.forEach((b)=>{
 // console.log(s2);
 // let n1 = a.join("");
 // console.log(n1);
-//let s = "debottam";
+// let s = "debottam";
 // let new_str = "";
 // for(let i =s.length - 1; i >= 0; i--){
 //     new_str += s[i];
 // }
-//console.log(new_str);
-//console.log(s.length);
+// console.log(new_str);
+// console.log(s.length);
 // let s_to_a = s.split("");
 // console.log(s_to_a);
-//console.log(s[0]);
+// console.log(s[0]);
 // words = ["abc","car","ada","racecar","cool"];
 // for(let str of words){
 //     let n = str.length;
@@ -964,10 +964,10 @@ add_btn.forEach((b)=>{
 //     console.log(str);
 //     console.log(new_str);
 // }
-//let res = [7,8,9];
+// let res = [7,8,9];
 // res.push([2,3,4]);
 // console.log(res);
-//let ob = {
+// let ob = {
 //     nickname : "rony"
 // };
 // ob.age = 21;
@@ -986,7 +986,7 @@ add_btn.forEach((b)=>{
 
 // console.log(obj2);
 
-//console.log('a' > 'b');
+// console.log('a' > 'b');
 // let alpha = ['b','c','d','a'];
 // alpha.sort();
 // console.log(alpha);
@@ -1022,7 +1022,7 @@ add_btn.forEach((b)=>{
 // }
 //.........END.........(For Now)
 
-//Hashing
+// Hashing
 // let numbers = [];
 // for (let i = 0; i < 500; i++) {
 //     let num = Math.floor(Math.random() * 1000);
