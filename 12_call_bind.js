@@ -72,6 +72,6 @@ const obj3 = {
         innerFunction();
     }
 };
-// Here, innerFunction is an arrow function, so this inherits from the enclosing lexical context
+// Here, innerFunction is an arrow function, so inherits this from the enclosing lexical context
 // and here enclosing lexical context is greet function where this refers to obj3
 obj3.greet(); // Output: Charlie
