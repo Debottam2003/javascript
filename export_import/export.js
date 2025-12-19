@@ -77,6 +77,9 @@ export let book = {
     }
 };
 
-export const obj = { book, car, add, subtract, multiply, divide, greet };
+export let obj = { book, car, add, subtract, multiply, divide, greet };
 // let obj = require("./export.js")
 // console.log(obj)
+
+export default function test() { }
+
