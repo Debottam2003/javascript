@@ -27,7 +27,7 @@ To run and practice the code locally:
 1. **Clone the repo:**
    ```bash
    git clone https://github.com/Debottam2003/javascript
-
+   ```
 
 
 
